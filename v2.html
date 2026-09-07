@@ -60,24 +60,22 @@ header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2
 .burger svg{width:22px;height:22px;color:var(--ink)}
 .mobile-menu{display:none;background:var(--paper);border-bottom:2px solid var(--line);padding:1rem 1.5rem;flex-direction:column;gap:.25rem}
 .mobile-menu.open{display:flex}
-.mobile-menu>a{padding:.8rem 1rem;border-radius:12px;text-decoration:none;color:var(--ink);font-weight:800}
-.mobile-menu>a:hover{background:var(--mist)}
+.mobile-menu .sheet-label{font-weight:900;font-size:1.05rem;color:var(--ink);margin-bottom:.7rem}
+.mobile-menu .sub{display:flex;flex-direction:column;gap:.45rem;margin-bottom:.4rem}
+.mobile-menu .sub a{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.05rem;text-decoration:none;color:var(--ink);font-weight:800;border:2px solid var(--line);border-radius:999px;background:#fff;box-shadow:0 3px 0 var(--line)}
+.mobile-menu .sub a:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
+.mobile-menu .sub a .chev{font-weight:900;opacity:.5}
 
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
 .bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;text-decoration:none;color:var(--ink-soft);padding:.35rem 0;border-radius:14px;font-weight:800;font-size:.62rem;min-width:0;transition:color .15s}
+button.bn-item{background:none;border:0;font:inherit;cursor:pointer;flex:0 0 auto;padding:.35rem .5rem}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
 .bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .bn-item.active{color:var(--green)}
-.bn-fab{display:none;align-items:center;justify-content:center;background:var(--green);color:#fff;border-radius:18px;width:54px;height:54px;box-shadow:0 5px 0 var(--green-d),0 8px 18px rgba(0,0,0,.18);text-decoration:none;flex-shrink:0;transition:transform .15s,box-shadow .15s}
-.bn-fab svg{width:25px;height:25px}
-.bn-fab:active{transform:translateY(4px);box-shadow:0 1px 0 var(--green-d)}
-.bn-menu{display:none;align-items:center;gap:.55rem;border:2px solid var(--line);border-radius:999px;padding:.55rem .95rem;background:var(--paper);box-shadow:0 4px 0 var(--line);cursor:pointer;flex-shrink:0;transition:transform .15s,box-shadow .15s}
-.bn-menu .dot{width:8px;height:8px;border-radius:50%}
-.bn-menu .dot:nth-child(1){background:var(--blue)}
-.bn-menu .dot:nth-child(2){background:var(--yellow)}
-.bn-menu .dot:nth-child(3){background:var(--green)}
-.bn-menu:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.bn-fab{display:none;align-items:center;gap:.4rem;background:var(--green);color:#fff;border-radius:999px;padding:.7rem 1.15rem;box-shadow:0 4px 0 var(--green-d);text-decoration:none;font-weight:800;font-size:.92rem;flex-shrink:0;transition:transform .15s,box-shadow .15s;white-space:nowrap}
+.bn-fab svg{width:18px;height:18px}
+.bn-fab:active{transform:translateY(3px);box-shadow:0 1px 0 var(--green-d)}
 .floating-header{display:none}
 
 /* ============ PAGES ============ */
@@ -109,7 +107,7 @@ h2.display,.title{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,3re
 .eyebrow.solid-orange{background:var(--orange);color:var(--ink)}
 
 /* ============ HERO ============ */
-.hero{background:linear-gradient(180deg,var(--green-bg) 0%,var(--paper) 100%);padding:calc(76px + 3.5rem) 0 4rem;position:relative;overflow:hidden}
+.hero{background:linear-gradient(180deg,var(--green-bg) 0%,var(--paper) 100%);padding:76px 0 4rem;position:relative;overflow:hidden}
 .hero-grid{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
 .hero h1{margin-bottom:1.2rem}
 .hero h1 .hl-green{color:var(--green)}
@@ -278,15 +276,14 @@ footer a:hover{color:var(--yellow)}
   .floating-header{display:flex;justify-content:center;padding:.6rem 1rem;pointer-events:none}
   .floating-header .logo{pointer-events:auto}
   .floating-header img{height:46px;width:auto;filter:drop-shadow(0 3px 8px rgba(60,60,60,.3))}
-  .nav{padding:.7rem 1.2rem}
+  .nav{display:none}
   .logo img{height:38px}
   .hero{padding:4.5rem 0 3.5rem}
   .page>.section:first-child{padding-top:5.5rem}
-  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
-  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--paper);border-top:2px solid var(--line);align-items:stretch;justify-content:space-around;padding:.4rem .5rem .3rem;padding-bottom:calc(.3rem + env(safe-area-inset-bottom,0px));gap:.25rem}
-  .bn-fab{display:flex;position:fixed;right:1rem;bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:111}
-  .bn-menu{display:flex}
-  .mobile-menu{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:105;max-height:72vh;overflow-y:auto;border-bottom:0;border-top:2px solid var(--line);border-radius:22px 22px 0 0;padding:1.2rem 1.5rem;padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+  body{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav{display:flex;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:110;background:#fff;border:2px solid var(--line);border-radius:999px;box-shadow:0 6px 20px rgba(60,60,60,.14);align-items:center;padding:.4rem;gap:.1rem;max-width:calc(100vw - 2rem)}
+  .bn-fab{display:flex}
+  .mobile-menu{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:105;max-height:72vh;overflow-y:auto;border-bottom:0;border-top:2px solid var(--line);border-radius:22px 22px 0 0;padding:1.2rem 1.5rem;padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{margin-top:.5rem}
   .grid3,.grid4{grid-template-columns:1fr 1fr}
@@ -379,37 +376,18 @@ footer a:hover{color:var(--yellow)}
     <a href="#/oprec" class="cta-btn">Daftar KM 11</a>
     <button class="burger" id="burger" aria-label="Menu"><svg><use href="#i-menu"/></svg></button>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#/home">Home</a>
-    <a href="#/tentang-kami">Tentang Kami</a>
-    <a href="#/perjalanan">Perjalanan KM</a>
-    <a href="#/panduan-umum">Panduan Umum</a>
-    <a href="#/briefing">Hari Briefing Nasional</a>
-    <a href="#/hari-mengajar">Hari Mengajar</a>
-    <a href="#/refleksi">Hari Refleksi</a>
-    <a href="#/panduan-km11">Panduan KM 11</a>
-    <a href="#/pengumuman">Pengumuman</a>
-    <a href="#/oprec">Open Recruitment</a>
-    <a href="#/lomba">Lomba KM 11</a>
-    <a href="#/fotografi">Fotografi Terbaik</a>
-    <a href="#/aftermovie">After Movie Terbaik</a>
-    <a href="#/faq">FAQ</a>
-    <a href="#/minjar">Tutorial Bertanya ke Minjar</a>
-  </div>
+  <div class="mobile-menu" id="mobileMenu"></div>
 </header>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
 <nav class="bottom-nav" aria-label="Navigasi utama">
   <a href="#/home" class="bn-item" data-route="home"><svg><use href="#i-book"/></svg><span>Home</span></a>
-  <a href="#/pengumuman" class="bn-item" data-route="pengumuman"><svg><use href="#i-megaphone"/></svg><span>Pengumuman</span></a>
-  <a href="#/hari-mengajar" class="bn-item" data-route="hari-mengajar"><svg><use href="#i-pencil"/></svg><span>Mengajar</span></a>
-  <a href="#/oprec" class="bn-item" data-route="oprec"><svg><use href="#i-users"/></svg><span>Oprec</span></a>
-  <a href="#/faq" class="bn-item" data-route="faq"><svg><use href="#i-chat"/></svg><span>FAQ</span></a>
+  <button type="button" class="bn-item" data-sheet="km"><svg><use href="#i-sparkle"/></svg><span>KM</span></button>
+  <button type="button" class="bn-item" data-sheet="kegiatan"><svg><use href="#i-cal"/></svg><span>Kegiatan</span></button>
+  <button type="button" class="bn-item" data-sheet="lomba"><svg><use href="#i-trophy"/></svg><span>Lomba</span></button>
+  <button type="button" class="bn-item" data-sheet="faq"><svg><use href="#i-chat"/></svg><span>FAQ</span></button>
+  <a href="#/oprec" class="bn-fab"><svg><use href="#i-pencil"/></svg><span>Daftar</span></a>
 </nav>
-<a href="#/oprec" class="bn-fab" aria-label="Daftar KM 11"><svg><use href="#i-pencil"/></svg></a>
-<button class="bn-menu" id="bnMenu" aria-label="Menu lengkap" style="position:fixed;left:1rem;bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:111">
-  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-</button>
 
 <!-- ============ HOME ============ -->
 <section class="page" data-page="home">
@@ -1166,7 +1144,6 @@ footer a:hover{color:var(--yellow)}
   var navLinks = document.querySelectorAll('.nav-links a');
   var groups = document.querySelectorAll('.nav-links > li');
   var mobileMenu = document.getElementById('mobileMenu');
-  var bnMenu = document.getElementById('bnMenu');
   var bnItems = document.querySelectorAll('.bn-item');
 
   var groupMap = {
@@ -1177,6 +1154,53 @@ footer a:hover{color:var(--yellow)}
     'lomba':'lomba','fotografi':'lomba','aftermovie':'lomba',
     'faq':'bantuan','minjar':'bantuan'
   };
+
+  var bnGroupMap = {
+    'tentang':'km','km11':'km','kegiatan':'kegiatan','lomba':'lomba','bantuan':'faq'
+  };
+
+  var sheetMap = {
+    'km': { label:'Tentang KM', links:[
+      ['#/tentang-kami','Tentang Kami'],
+      ['#/perjalanan','Perjalanan KM'],
+      ['#/panduan-umum','Panduan Umum'],
+      ['#/panduan-km11','Panduan KM 11'],
+      ['#/pengumuman','Pengumuman']
+    ]},
+    'kegiatan': { label:'Kegiatan', links:[
+      ['#/briefing','Hari Briefing Nasional'],
+      ['#/hari-mengajar','Hari Mengajar'],
+      ['#/refleksi','Hari Refleksi']
+    ]},
+    'lomba': { label:'Lomba & Karya', links:[
+      ['#/lomba','Lomba KM 11'],
+      ['#/fotografi','Fotografi Terbaik'],
+      ['#/aftermovie','After Movie Terbaik']
+    ]},
+    'faq': { label:'Bantuan', links:[
+      ['#/faq','FAQ'],
+      ['#/minjar','Tutorial Bertanya ke Minjar']
+    ]}
+  };
+  var openSheetKey = null;
+
+  function closeSheet(){
+    openSheetKey = null;
+    mobileMenu.classList.remove('open');
+  }
+
+  function openSheet(key){
+    var s = sheetMap[key];
+    if(!s) return;
+    var html = '<div class="sheet-label">' + s.label + '</div><div class="sub">';
+    s.links.forEach(function(l){
+      html += '<a href="' + l[0] + '"><span>' + l[1] + '</span><span class="chev">&rsaquo;</span></a>';
+    });
+    html += '</div>';
+    mobileMenu.innerHTML = html;
+    mobileMenu.classList.add('open');
+    openSheetKey = key;
+  }
 
   function route(){
     var hash = location.hash.replace(/^#\/?/, '') || 'home';
@@ -1194,7 +1218,12 @@ footer a:hover{color:var(--yellow)}
       a.classList.toggle('active', a.getAttribute('data-route') === hash);
     });
     bnItems.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('data-route') === hash);
+      var key = a.getAttribute('data-sheet');
+      if(key){
+        a.classList.toggle('active', bnGroupMap[groupMap[hash]] === key);
+      } else {
+        a.classList.toggle('active', a.getAttribute('data-route') === hash);
+      }
     });
     groups.forEach(function(g){
       var btn = g.querySelector('.dropbtn');
@@ -1204,7 +1233,7 @@ footer a:hover{color:var(--yellow)}
       btn.style.background = on ? 'var(--yellow-bg)' : '';
       btn.style.color = on ? 'var(--yellow-d)' : '';
     });
-    mobileMenu.classList.remove('open');
+    closeSheet();
     groups.forEach(function(g){ g.classList.remove('open'); });
     window.scrollTo({top:0, behavior:'instant'});
   }
@@ -1223,9 +1252,22 @@ footer a:hover{color:var(--yellow)}
     groups.forEach(function(g){ g.classList.remove('open'); });
   });
 
-  bnMenu.addEventListener('click', function(e){
-    e.stopPropagation();
-    mobileMenu.classList.toggle('open');
+  document.addEventListener('click', function(){
+    closeSheet();
+  });
+
+  // bottom nav sheet triggers: tap = open sheet, tap again = close
+  bnItems.forEach(function(a){
+    var key = a.getAttribute('data-sheet');
+    if(!key) return;
+    a.addEventListener('click', function(e){
+      e.stopPropagation();
+      if(openSheetKey === key){
+        closeSheet();
+      } else {
+        openSheet(key);
+      }
+    });
   });
 
   // mobile bottom nav: tap active tab again = scroll to top
