@@ -72,12 +72,12 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
-.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;color:var(--black);padding:.35rem 0;border-radius:12px;font-weight:700;font-size:.62rem;min-width:0}
+.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;color:var(--black);padding:.35rem 0;border-radius:12px;font-weight:700;font-size:.72rem;min-width:0}
 button.bn-item{background:none;border:0;font-family:inherit;cursor:pointer}
 .daftar-fab{display:none}
-.daftar-fab svg{width:18px;height:18px}
+.daftar-fab svg{width:18px;height:18px;max-width:18px;max-height:18px}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
-.bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;letter-spacing:.01em}
+.bn-item span{white-space:nowrap;overflow:visible;text-overflow:clip;max-width:none;letter-spacing:.01em}
 .bn-item.active{color:var(--purple)}
 
 .floating-header{display:none}
@@ -249,7 +249,7 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   .nav{display:none}
   .bn-wrap{display:block;padding:0 .75rem}
   .bottom-nav{display:flex;width:100%;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem .3rem;gap:.1rem}
-  .daftar-fab{display:flex;align-items:center;gap:.45rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border-radius:999px;padding:.65rem 1.05rem;text-decoration:none;font-weight:800;font-size:.85rem;box-shadow:4px 4px 0 var(--black);border:3px solid var(--black)}
+  .daftar-fab{display:inline-flex;align-items:center;gap:.45rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border-radius:999px;padding:.65rem 1.05rem;text-decoration:none;font-weight:800;font-size:.85rem;box-shadow:4px 4px 0 var(--black);border:3px solid var(--black);max-width:110px;max-height:42px;overflow:hidden}
   .logo img{height:38px}
   .hero{padding:5.5rem 0 0}
   .page>.section:first-child{padding-top:6rem}

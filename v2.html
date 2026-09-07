@@ -69,13 +69,13 @@ header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2
 
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
-.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;text-decoration:none;color:var(--ink-soft);padding:.35rem 0;border-radius:14px;font-weight:800;font-size:.62rem;min-width:0;transition:color .15s}
+.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;text-decoration:none;color:var(--ink-soft);padding:.35rem 0;border-radius:14px;font-weight:800;font-size:.72rem;min-width:0;transition:color .15s}
 button.bn-item{background:none;border:0;font-family:inherit;cursor:pointer}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
-.bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.bn-item span{white-space:nowrap;overflow:visible;text-overflow:clip;max-width:none}
 .bn-item.active{color:var(--green)}
 .daftar-fab{display:none}
-.daftar-fab svg{width:16px;height:16px;flex-shrink:0}
+.daftar-fab svg{width:16px;height:16px;flex-shrink:0;max-width:16px;max-height:16px}
 .daftar-fab:active{transform:translateY(3px)}
 .floating-header{display:none}
 
@@ -286,7 +286,7 @@ footer a:hover{color:var(--yellow)}
   .bn-wrap{display:block;padding:0 .75rem}
   .bottom-nav{display:flex;width:100%;background:#fff;border:2px solid var(--line);border-radius:999px;box-shadow:0 6px 20px rgba(60,60,60,.14);align-items:center;padding:.4rem .3rem;gap:.05rem}
   button.bn-item{padding:.35rem 0}
-  .daftar-fab{display:flex;align-items:center;gap:.3rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--green);color:#fff;border-radius:999px;padding:.45rem .7rem;box-shadow:0 3px 0 var(--green-d);text-decoration:none;font-weight:700;font-size:.7rem;white-space:nowrap}
+  .daftar-fab{display:inline-flex;align-items:center;gap:.3rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--green);color:#fff;border-radius:999px;padding:.45rem .7rem;box-shadow:0 3px 0 var(--green-d);text-decoration:none;font-weight:700;font-size:.7rem;white-space:nowrap;max-width:90px;max-height:36px;overflow:hidden}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{margin-top:.5rem}
   .grid3,.grid4{grid-template-columns:1fr 1fr}
