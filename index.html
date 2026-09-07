@@ -60,19 +60,21 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 .cta-btn:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--black)}
 .burger{display:none;background:var(--b-yellow);border:3px solid var(--black);border-radius:10px;width:46px;height:46px;cursor:pointer;box-shadow:3px 3px 0 var(--black);align-items:center;justify-content:center}
 .burger svg{width:22px;height:22px}
-.mobile-menu{display:none;position:fixed;inset:76px 0 0 0;background:var(--white);z-index:99;padding:1.2rem;overflow-y:auto;border-top:4px solid var(--black)}
-.mobile-menu.open{display:block}
-.mobile-menu .sheet-label{font-family:var(--font-display);font-size:1.05rem;margin-bottom:.7rem}
-.mobile-menu .sub{display:flex;flex-direction:column;gap:.4rem;margin-bottom:.6rem}
-.mobile-menu .sub a{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;text-decoration:none;color:var(--black);font-weight:700;border:3px solid var(--black);border-radius:999px;background:var(--white);box-shadow:3px 3px 0 var(--black)}
+.bn-wrap{display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:110;align-items:center;gap:.55rem;max-width:calc(100vw - 1.5rem)}
+.mobile-menu{display:block;position:fixed;left:50%;transform:translateX(-50%) translateY(10px) scale(.96);transform-origin:bottom center;bottom:calc(98px + env(safe-area-inset-bottom,0px));z-index:109;background:var(--white);border:3px solid var(--black);border-radius:18px;box-shadow:5px 5px 0 var(--black);padding:.85rem;width:min(320px,calc(100vw - 2rem));opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
+.mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0) scale(1)}
+.mobile-menu .sheet-label{font-weight:900;font-size:.95rem;color:var(--black);margin-bottom:.55rem}
+.mobile-menu .sub{display:flex;flex-direction:column;gap:.4rem}
+.mobile-menu .sub a{display:flex;align-items:center;justify-content:space-between;border:3px solid var(--black);border-radius:999px;padding:.5rem .95rem;text-decoration:none;font-weight:800;font-size:.85rem;color:var(--black);background:var(--white);box-shadow:3px 3px 0 var(--black)}
 .mobile-menu .sub a:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black)}
-.mobile-menu .sub a .chev{font-weight:800;opacity:.55}
+.mobile-menu .sub a .chev{font-weight:900;opacity:.5}
 
 
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
 .bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;color:var(--black);padding:.35rem 0;border-radius:12px;font-weight:700;font-size:.62rem;min-width:0}
 button.bn-item{background:none;border:0;font:inherit;cursor:pointer;flex:0 0 auto;padding:.35rem .5rem}
+.bn-fab{display:none;align-items:center;gap:.45rem;background:var(--g-green);color:var(--black);border-radius:999px;padding:.65rem 1.05rem;text-decoration:none;font-weight:800;font-size:.85rem;flex-shrink:0;box-shadow:4px 4px 0 var(--black);border:3px solid var(--black)}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
 .bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;letter-spacing:.01em}
 .bn-item.active{color:var(--purple)}
@@ -234,7 +236,7 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 @keyframes float2{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-10px) rotate(6deg)}}
 .f1{animation:float1 5s ease-in-out infinite}
 .f2{animation:float2 6.5s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.f1,.f2,.marquee-track{animation:none}}
+@media (prefers-reduced-motion:reduce){.f1,.f2,.marquee-track{animation:none}.mobile-menu{transition:none}}
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:1020px){
@@ -245,9 +247,9 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   .floating-header .logo{pointer-events:auto}
   .floating-header img{height:52px;width:auto;filter:drop-shadow(0 4px 10px rgba(42,42,42,.35))}
   .nav{display:none}
-  .bottom-nav{display:flex;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:110;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem;gap:.1rem;max-width:calc(100vw - 2rem)}
+  .bn-wrap{display:flex}
+  .bottom-nav{display:flex;min-width:0;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem;gap:.1rem}
   .bn-fab{display:flex}
-  .mobile-menu{inset:auto 0 0 0;max-height:72vh;border-top:4px solid var(--black);border-radius:20px 20px 0 0;padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
   .logo img{height:38px}
   .hero{padding:5.5rem 0 0}
   .page>.section:first-child{padding-top:6rem}
@@ -353,14 +355,16 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 <div class="mobile-menu" id="mobileMenu"></div>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
-<nav class="bottom-nav" aria-label="Navigasi utama">
-  <a href="#/home" class="bn-item" data-route="home"><svg><use href="#i-book"/></svg><span>Home</span></a>
-  <button type="button" class="bn-item" data-sheet="km"><svg><use href="#i-sparkle"/></svg><span>KM</span></button>
-  <button type="button" class="bn-item" data-sheet="kegiatan"><svg><use href="#i-cal"/></svg><span>Kegiatan</span></button>
-  <button type="button" class="bn-item" data-sheet="lomba"><svg><use href="#i-trophy"/></svg><span>Lomba</span></button>
-  <button type="button" class="bn-item" data-sheet="faq"><svg><use href="#i-help"/></svg><span>FAQ</span></button>
+<div class="bn-wrap">
+  <nav class="bottom-nav" aria-label="Navigasi utama">
+    <a href="#/home" class="bn-item" data-route="home"><svg><use href="#i-book"/></svg><span>Home</span></a>
+    <button type="button" class="bn-item" data-sheet="km"><svg><use href="#i-sparkle"/></svg><span>KM</span></button>
+    <button type="button" class="bn-item" data-sheet="kegiatan"><svg><use href="#i-cal"/></svg><span>Kegiatan</span></button>
+    <button type="button" class="bn-item" data-sheet="lomba"><svg><use href="#i-trophy"/></svg><span>Lomba</span></button>
+    <button type="button" class="bn-item" data-sheet="faq"><svg><use href="#i-help"/></svg><span>FAQ</span></button>
+  </nav>
   <a href="#/oprec" class="bn-fab"><svg><use href="#i-pencil"/></svg><span>Daftar</span></a>
-</nav>
+</div>
 
 <main id="app">
 
