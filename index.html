@@ -73,6 +73,9 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 .mobile-menu>a{display:block;border:3px solid var(--black);border-radius:14px;padding:.9rem 1.1rem;margin-bottom:.7rem;font-weight:800;text-decoration:none;color:var(--black)}
 .mobile-menu>a:hover{background:var(--b-yellow)}
 
+/* ============ MOBILE BOTTOM NAV ============ */
+.bottom-nav{display:none}
+
 /* ============ PAGES / SPA ============ */
 .page{display:none;min-height:100vh}
 .page.active{display:block;animation:pageIn .35s ease}
@@ -231,7 +234,20 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 /* ============ RESPONSIVE ============ */
 @media(max-width:1020px){
   .nav-links,.nav .cta-btn{display:none}
-  .burger{display:flex}
+  .nav .burger{display:none}
+  header{position:static;border-bottom:3px solid var(--black)}
+  .nav{padding:.7rem 1.2rem}
+  .logo img{height:38px}
+  .hero{padding:3rem 0 0}
+  .page>.section:first-child{padding-top:3.5rem}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--white);border-top:4px solid var(--black);align-items:center;justify-content:space-between;padding:.7rem 1.1rem;padding-bottom:calc(.7rem + env(safe-area-inset-bottom,0px));gap:.7rem}
+  .bottom-nav img{height:32px;width:auto}
+  .bottom-nav .bn-burger{display:flex;background:var(--b-yellow);border:3px solid var(--black);border-radius:10px;width:46px;height:46px;cursor:pointer;box-shadow:3px 3px 0 var(--black);align-items:center;justify-content:center;flex-shrink:0}
+  .bottom-nav .bn-burger svg{width:22px;height:22px}
+  .bottom-nav .bn-burger:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black)}
+  .bottom-nav .bn-cta{padding:.55rem .95rem;font-size:.88rem}
+  .mobile-menu{inset:auto 0 0 0;max-height:72vh;border-top:4px solid var(--black);border-radius:20px 20px 0 0;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{min-height:420px;margin-top:1rem;position:relative}
   .hero-note{position:relative;top:auto;right:auto;display:block;margin-bottom:1.5rem;font-size:1.3rem}
@@ -242,7 +258,6 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 }
 @media(max-width:640px){
   .f-grid{grid-template-columns:1fr}
-  .hero{padding-top:4rem}
 }
 </style>
 </head>
@@ -324,6 +339,13 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
     <button class="burger" id="burger" aria-label="Menu"><svg><use href="#i-menu"/></svg></button>
   </nav>
 </header>
+
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<div class="bottom-nav">
+  <a href="#/home" class="logo"><img src="img/logo.png" alt="Kemenkeu Mengajar 11"></a>
+  <a href="#/oprec" class="cta-btn bn-cta">Daftar KM 11</a>
+  <button class="bn-burger" id="bnBurger" aria-label="Menu"><svg><use href="#i-menu"/></svg></button>
+</div>
 
 <!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
@@ -1153,7 +1175,7 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   var navLinks = document.querySelectorAll('.nav-links a');
   var groups = document.querySelectorAll('.nav-links > li');
   var mobileMenu = document.getElementById('mobileMenu');
-  var burger = document.getElementById('burger');
+  var burger = document.getElementById('bnBurger');
 
   var groupMap = {
     'home':null,
