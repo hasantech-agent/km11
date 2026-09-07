@@ -21,7 +21,7 @@
   font-weight:normal;font-style:normal;font-display:swap;
 }
 :root{
-  --white:#FFFFFF; --black:#231F20; --b-yellow:#F8EC3A; --m-green:#31B884;
+  --white:#FFFFFF; --black:#231F20; --b-yellow:#F8EC3A; --m-green:#31B884; --g-green:#31B884;
   --crimson:#CC1E4C; --d-navy:#292663; --m-blue:#2D3189; --r-black:#000000;
   --g-yellow:#FFCE09; --indigo:#464A9F; --teal:#53BF9C; --b-red:#EF3637; --purple:#582D8D;
   --font-display:'Catalyst Legion','Anton',Impact,sans-serif;
@@ -61,7 +61,7 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 .burger{display:none;background:var(--b-yellow);border:3px solid var(--black);border-radius:10px;width:46px;height:46px;cursor:pointer;box-shadow:3px 3px 0 var(--black);align-items:center;justify-content:center}
 .burger svg{width:22px;height:22px}
 .bn-wrap{display:none;position:fixed;left:0;right:0;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:110;align-items:center;gap:.55rem}
-.mobile-menu{display:block;position:fixed;left:50%;transform:translateX(-50%) translateY(10px) scale(.96);transform-origin:bottom center;bottom:calc(98px + env(safe-area-inset-bottom,0px));z-index:109;background:var(--white);border:3px solid var(--black);border-radius:18px;box-shadow:5px 5px 0 var(--black);padding:.85rem;width:min(320px,calc(100vw - 2rem));opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
+.mobile-menu{display:block;position:fixed;left:50%;transform:translateX(-50%) translateY(10px) scale(.96);transform-origin:bottom center;bottom:calc(118px + env(safe-area-inset-bottom,0px));z-index:109;background:var(--white);border:3px solid var(--black);border-radius:18px;box-shadow:5px 5px 0 var(--black);padding:.85rem;width:min(320px,calc(100vw - 2rem));opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
 .mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0) scale(1)}
 .mobile-menu .sheet-label{font-weight:900;font-size:.95rem;color:var(--black);margin-bottom:.55rem}
 .mobile-menu .sub{display:flex;flex-direction:column;gap:.4rem}
@@ -248,12 +248,12 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   .floating-header img{height:52px;width:auto;filter:drop-shadow(0 4px 10px rgba(42,42,42,.35))}
   .nav{display:none}
   .bn-wrap{display:block;padding:0 .75rem}
-  .bottom-nav{display:flex;width:100%;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem .3rem;gap:.1rem}
-  .daftar-fab{display:inline-flex;align-items:center;gap:.45rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border-radius:999px;padding:.65rem 1.05rem;text-decoration:none;font-weight:800;font-size:.85rem;box-shadow:4px 4px 0 var(--black);border:3px solid var(--black);max-width:110px;max-height:42px;overflow:hidden}
+  .bottom-nav{display:flex;width:100%;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem .5rem;gap:.3rem}
+  .daftar-fab{display:inline-flex;align-items:center;gap:.35rem;position:fixed;right:1rem;bottom:calc(108px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border:3px solid var(--black);border-radius:999px;padding:.5rem .8rem;text-decoration:none;font-weight:800;font-size:.75rem;box-shadow:3px 3px 0 var(--black);white-space:nowrap}
   .logo img{height:38px}
   .hero{padding:5.5rem 0 0}
   .page>.section:first-child{padding-top:6rem}
-  body{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  body{padding-bottom:calc(160px + env(safe-area-inset-bottom,0px))}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{min-height:420px;margin-top:1rem;position:relative}
   .hero-note{position:relative;top:auto;right:auto;display:block;margin-bottom:1.5rem;font-size:1.3rem}
