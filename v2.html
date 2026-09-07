@@ -70,13 +70,12 @@ header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
 .bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;text-decoration:none;color:var(--ink-soft);padding:.35rem 0;border-radius:14px;font-weight:800;font-size:.62rem;min-width:0;transition:color .15s}
-button.bn-item{background:none;border:0;font:inherit;cursor:pointer;flex:0 0 auto;padding:.35rem .5rem}
+button.bn-item{background:none;border:0;font-family:inherit;cursor:pointer}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
 .bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .bn-item.active{color:var(--green)}
-.bn-fab{display:none;align-items:center;gap:.4rem;background:var(--green);color:#fff;border-radius:999px;padding:.7rem 1.15rem;box-shadow:0 4px 0 var(--green-d);text-decoration:none;font-weight:800;font-size:.92rem;flex-shrink:0;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.bn-fab svg{width:18px;height:18px}
-.bn-fab:active{transform:translateY(3px);box-shadow:0 1px 0 var(--green-d)}
+.daftar-fab{display:none}
+.daftar-fab:active{transform:translateY(3px)}
 .floating-header{display:none}
 
 /* ============ PAGES ============ */
@@ -273,7 +272,8 @@ footer a:hover{color:var(--yellow)}
 @media(max-width:1020px){
   .nav-links,.nav .cta-btn{display:none}
   .nav .burger{display:none}
-  header{position:fixed;top:0;left:0;right:0;z-index:115;background:transparent;border-bottom:0;pointer-events:none}
+  header{position:fixed;top:0;left:0;right:0;z-index:115;background:transparent;border-bottom:0;pointer-events:none;transition:background .25s ease,border-color .25s ease}
+  header.scrolled{background:#fff;border-bottom:2px solid var(--line);pointer-events:auto}
   .floating-header{display:flex;justify-content:center;padding:.6rem 1rem;pointer-events:none}
   .floating-header .logo{pointer-events:auto}
   .floating-header img{height:46px;width:auto;filter:drop-shadow(0 3px 8px rgba(60,60,60,.3))}
@@ -284,9 +284,8 @@ footer a:hover{color:var(--yellow)}
   body{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
   .bn-wrap{display:flex}
   .bottom-nav{display:flex;min-width:0;background:#fff;border:2px solid var(--line);border-radius:999px;box-shadow:0 6px 20px rgba(60,60,60,.14);align-items:center;padding:.4rem;gap:.05rem}
-  button.bn-item{padding:.35rem .3rem}
-  .bn-fab{padding:.65rem .95rem;font-size:.85rem}
-  .bn-fab{display:flex}
+  button.bn-item{padding:.35rem 0}
+  .daftar-fab{display:flex;align-items:center;gap:.35rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--green);color:#fff;border-radius:999px;padding:.55rem .85rem;box-shadow:0 4px 0 var(--green-d);text-decoration:none;font-weight:800;font-size:.75rem;white-space:nowrap}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{margin-top:.5rem}
   .grid3,.grid4{grid-template-columns:1fr 1fr}
@@ -382,6 +381,9 @@ footer a:hover{color:var(--yellow)}
   <div class="mobile-menu" id="mobileMenu"></div>
 </header>
 
+<!-- ===== FLOATING DAFTAR FAB ===== -->
+<a href="#/oprec" class="daftar-fab"><svg><use href="#i-pencil"/></svg><span>Daftar</span></a>
+
 <!-- ===== MOBILE BOTTOM NAV ===== -->
 <div class="bn-wrap">
   <nav class="bottom-nav" aria-label="Navigasi utama">
@@ -391,7 +393,6 @@ footer a:hover{color:var(--yellow)}
     <button type="button" class="bn-item" data-sheet="lomba"><svg><use href="#i-trophy"/></svg><span>Lomba</span></button>
     <button type="button" class="bn-item" data-sheet="faq"><svg><use href="#i-chat"/></svg><span>FAQ</span></button>
   </nav>
-  <a href="#/oprec" class="bn-fab"><svg><use href="#i-pencil"/></svg><span>Daftar</span></a>
 </div>
 
 <!-- ============ HOME ============ -->
@@ -1150,6 +1151,12 @@ footer a:hover{color:var(--yellow)}
   var groups = document.querySelectorAll('.nav-links > li');
   var mobileMenu = document.getElementById('mobileMenu');
   var bnItems = document.querySelectorAll('.bn-item');
+
+  // mobile header: transparent at top, solid background when scrolled
+  var appHeader = document.querySelector('header');
+  function syncHeader(){ appHeader.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', syncHeader, {passive:true});
+  syncHeader();
 
   var groupMap = {
     'home':null,

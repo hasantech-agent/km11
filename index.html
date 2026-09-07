@@ -73,14 +73,13 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
 .bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;color:var(--black);padding:.35rem 0;border-radius:12px;font-weight:700;font-size:.62rem;min-width:0}
-button.bn-item{background:none;border:0;font:inherit;cursor:pointer;flex:0 0 auto;padding:.35rem .5rem}
-.bn-fab{display:none;align-items:center;gap:.45rem;background:var(--g-green);color:var(--black);border-radius:999px;padding:.65rem 1.05rem;text-decoration:none;font-weight:800;font-size:.85rem;flex-shrink:0;box-shadow:4px 4px 0 var(--black);border:3px solid var(--black)}
+button.bn-item{background:none;border:0;font-family:inherit;cursor:pointer}
+.daftar-fab{display:none}
+.daftar-fab svg{width:18px;height:18px}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
 .bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;letter-spacing:.01em}
 .bn-item.active{color:var(--purple)}
-.bn-fab{display:none;align-items:center;gap:.4rem;background:var(--g-green);color:var(--black);border:3px solid var(--black);border-radius:999px;padding:.65rem 1.1rem;box-shadow:3px 3px 0 var(--black);text-decoration:none;font-weight:800;font-size:.95rem;flex-shrink:0;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.bn-fab svg{width:18px;height:18px}
-.bn-fab:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black)}
+
 .floating-header{display:none}
 
 /* ============ PAGES / SPA ============ */
@@ -242,14 +241,15 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 @media(max-width:1020px){
   .nav-links,.nav .cta-btn{display:none}
   .nav .burger{display:none}
-  header{position:fixed;top:0;left:0;right:0;width:100%;z-index:115;background:transparent;border-bottom:0;pointer-events:none}
+  header{position:fixed;top:0;left:0;right:0;width:100%;z-index:115;background:transparent;border-bottom:0;pointer-events:none;transition:background .25s ease,border-color .25s ease}
+  header.scrolled{background:var(--white);border-bottom:4px solid var(--black);pointer-events:auto}
   .floating-header{display:flex;justify-content:center;padding:.6rem 1rem;pointer-events:none}
   .floating-header .logo{pointer-events:auto}
   .floating-header img{height:52px;width:auto;filter:drop-shadow(0 4px 10px rgba(42,42,42,.35))}
   .nav{display:none}
   .bn-wrap{display:flex}
   .bottom-nav{display:flex;min-width:0;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem;gap:.1rem}
-  .bn-fab{display:flex}
+  .daftar-fab{display:flex;align-items:center;gap:.45rem;position:fixed;right:1rem;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border-radius:999px;padding:.65rem 1.05rem;text-decoration:none;font-weight:800;font-size:.85rem;box-shadow:4px 4px 0 var(--black);border:3px solid var(--black)}
   .logo img{height:38px}
   .hero{padding:5.5rem 0 0}
   .page>.section:first-child{padding-top:6rem}
@@ -283,6 +283,7 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   <symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
   <symbol id="i-clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6"/><path d="M9 16h6"/></symbol>
   <symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
@@ -351,6 +352,9 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   </nav>
 </header>
 
+<!-- ===== FLOATING DAFTAR FAB ===== -->
+<a href="#/oprec" class="daftar-fab"><svg><use href="#i-pencil"/></svg><span>Daftar</span></a>
+
 <!-- ===== MOBILE SHEET ===== -->
 <div class="mobile-menu" id="mobileMenu"></div>
 
@@ -363,7 +367,6 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
     <button type="button" class="bn-item" data-sheet="lomba"><svg><use href="#i-trophy"/></svg><span>Lomba</span></button>
     <button type="button" class="bn-item" data-sheet="faq"><svg><use href="#i-help"/></svg><span>FAQ</span></button>
   </nav>
-  <a href="#/oprec" class="bn-fab"><svg><use href="#i-pencil"/></svg><span>Daftar</span></a>
 </div>
 
 <main id="app">
@@ -1166,6 +1169,12 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   var groups = document.querySelectorAll('.nav-links > li');
   var mobileMenu = document.getElementById('mobileMenu');
   var bnItems = document.querySelectorAll('.bn-item');
+
+  // mobile header: transparent at top, solid background when scrolled
+  var appHeader = document.querySelector('header');
+  function syncHeader(){ appHeader.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', syncHeader, {passive:true});
+  syncHeader();
 
   var groupMap = {
     'home':null,
