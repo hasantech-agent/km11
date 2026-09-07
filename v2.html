@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kemenkeu Mengajar 11 | Satu Hari Mengajar, Selamanya Menginspirasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+@font-face{
+  font-family:'Catalyst Legion';
+  src:url('fonts/catalyst-legion.woff2') format('woff2'),
+      url('fonts/catalyst-legion.woff') format('woff');
+  font-weight:normal;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'Chalk Authen';
+  src:url('fonts/chalk-authen.woff') format('woff');
+  font-weight:normal;font-style:normal;font-display:swap;
+}
+:root{
+  /* Duolingo-inspired palette, KM-flavored */
+  --green:#58CC02; --green-d:#46A302; --green-bg:#D7FFB8;
+  --blue:#1CB0F6; --blue-d:#1899D6; --blue-bg:#DDF4FF;
+  --yellow:#FFC800; --yellow-d:#E0A800; --yellow-bg:#FFF3C4;
+  --red:#FF4B4B; --red-d:#EA2B2B; --red-bg:#FFDEDE;
+  --purple:#A560E8; --purple-d:#8A48CF; --purple-bg:#F0E4FF;
+  --orange:#FF9600; --orange-d:#E08600; --orange-bg:#FFE9CC;
+  --ink:#3C3C3C; --ink-soft:#777777; --ink-faint:#AFAFAF;
+  --paper:#FFFFFF; --mist:#F7F7F7; --line:#E5E5E5;
+  --font-display:'Catalyst Legion','Nunito',sans-serif;
+  --font-hand:'Chalk Authen',cursive;
+  --font-body:'Nunito',system-ui,sans-serif;
+  --r-lg:28px; --r-md:20px; --r-sm:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:var(--paper);font-size:16px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--yellow);color:var(--ink)}
+
+/* ============ NAV ============ */
+header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2px solid var(--line)}
+.nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.5rem;gap:1rem}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:46px;width:auto;display:block}
+.nav-links{display:flex;list-style:none;gap:.2rem;align-items:center}
+.nav-links>li{position:relative}
+.nav-links a,.dropbtn{display:block;padding:.55rem .85rem;border-radius:12px;text-decoration:none;color:var(--ink-soft);font-weight:800;font-size:.92rem;background:none;border:0;cursor:pointer;font-family:var(--font-body);transition:background .15s,color .15s}
+.nav-links a:hover,.dropbtn:hover{background:var(--mist);color:var(--ink)}
+.nav-links a.active{color:var(--blue);background:var(--blue-bg)}
+.dropbtn .caret{font-size:.7rem;margin-left:.15rem}
+.dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:var(--paper);border:2px solid var(--line);border-radius:var(--r-sm);padding:.5rem;min-width:230px;box-shadow:0 12px 32px rgba(0,0,0,.12);list-style:none;z-index:50}
+.nav-links li.open .dropdown{display:block}
+.dropdown a{border-radius:10px}
+.cta-btn{background:var(--green);color:#fff;font-weight:900;text-transform:uppercase;letter-spacing:.04em;padding:.7rem 1.3rem;border-radius:14px;text-decoration:none;font-size:.88rem;box-shadow:0 4px 0 var(--green-d);transition:transform .1s,box-shadow .1s;white-space:nowrap}
+.cta-btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--green-d)}
+.cta-btn:active{transform:translateY(4px);box-shadow:0 0 0 var(--green-d)}
+.burger{display:none;background:var(--mist);border:2px solid var(--line);border-radius:12px;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px;color:var(--ink)}
+.mobile-menu{display:none;background:var(--paper);border-bottom:2px solid var(--line);padding:1rem 1.5rem;flex-direction:column;gap:.25rem}
+.mobile-menu.open{display:flex}
+.mobile-menu>a{padding:.8rem 1rem;border-radius:12px;text-decoration:none;color:var(--ink);font-weight:800}
+.mobile-menu>a:hover{background:var(--mist)}
+
+/* ============ PAGES ============ */
+.page{display:none;min-height:100vh}
+.page.active{display:block;animation:pageIn .35s ease}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.section{padding:4rem 0;position:relative}
+.page>.section:first-child{padding-top:calc(76px + 3rem)}
+
+/* ============ TYPO ============ */
+.display{font-family:var(--font-display);text-transform:uppercase;line-height:1.05;letter-spacing:.01em}
+h1.display{font-size:clamp(2.4rem,6vw,4.2rem)}
+h2.display,.title{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,3rem);text-transform:uppercase;line-height:1.08;margin-bottom:1rem}
+.hand{font-family:var(--font-hand)}
+.lead{font-size:1.12rem;line-height:1.75;color:var(--ink-soft)}
+.eyebrow{display:inline-flex;align-items:center;gap:.4rem;font-weight:900;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.1rem}
+.eyebrow.green{background:var(--green-bg);color:var(--green-d)}
+.eyebrow.blue{background:var(--blue-bg);color:var(--blue-d)}
+.eyebrow.yellow{background:var(--yellow-bg);color:var(--yellow-d)}
+.eyebrow.red{background:var(--red-bg);color:var(--red-d)}
+.eyebrow.purple{background:var(--purple-bg);color:var(--purple-d)}
+.eyebrow.orange{background:var(--orange-bg);color:var(--orange-d)}
+.eyebrow.solid-green{background:var(--green);color:#fff}
+.eyebrow.solid-blue{background:var(--blue);color:#fff}
+.eyebrow.solid-yellow{background:var(--yellow);color:var(--ink)}
+.eyebrow.solid-red{background:var(--red);color:#fff}
+.eyebrow.solid-purple{background:var(--purple);color:#fff}
+.eyebrow.solid-orange{background:var(--orange);color:var(--ink)}
+
+/* ============ HERO ============ */
+.hero{background:linear-gradient(180deg,var(--green-bg) 0%,var(--paper) 100%);padding:calc(76px + 3.5rem) 0 4rem;position:relative;overflow:hidden}
+.hero-grid{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero h1{margin-bottom:1.2rem}
+.hero h1 .hl-green{color:var(--green)}
+.hero h1 .hl-blue{color:var(--blue)}
+.hero p{margin-bottom:1.8rem;max-width:32rem}
+.hero-badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.badge{font-weight:800;font-size:.8rem;padding:.35rem .9rem;border-radius:999px;background:var(--paper);border:2px solid var(--line);color:var(--ink-soft)}
+.badge.g{background:var(--green-bg);border-color:transparent;color:var(--green-d)}
+.badge.b{background:var(--blue-bg);border-color:transparent;color:var(--blue-d)}
+.badge.r{background:var(--red-bg);border-color:transparent;color:var(--red-d)}
+.hero-art{position:relative;display:flex;flex-direction:column;gap:1rem}
+.hero-note{font-family:var(--font-hand);font-size:1.6rem;color:var(--ink);transform:rotate(-3deg);align-self:flex-end;margin-right:1rem}
+.hero-card{background:var(--paper);border-radius:var(--r-md);padding:1.4rem 1.6rem;box-shadow:0 8px 24px rgba(0,0,0,.08);border:2px solid var(--line);display:flex;align-items:center;gap:1rem;max-width:330px}
+.hero-card:nth-child(2){align-self:flex-start;transform:rotate(1.5deg)}
+.hero-card:nth-child(3){align-self:flex-end;transform:rotate(-1.5deg)}
+.hero-card:nth-child(4){align-self:flex-start;margin-left:2rem;transform:rotate(1deg)}
+.hc-num{width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.8rem;color:#fff;flex-shrink:0}
+.hc1{background:var(--green);box-shadow:0 4px 0 var(--green-d)}
+.hc2{background:var(--red);box-shadow:0 4px 0 var(--red-d)}
+.hc3{background:var(--blue);box-shadow:0 4px 0 var(--blue-d)}
+.hero-card .lbl{font-weight:800;font-size:.95rem}
+.hero-card .sub{font-size:.82rem;color:var(--ink-soft);font-weight:600}
+
+/* ============ MARQUEE ============ */
+.marquee{background:var(--purple);padding:.9rem 0;overflow:hidden}
+.marquee-track{display:flex;gap:2.5rem;white-space:nowrap;animation:mq 24s linear infinite;font-family:var(--font-display);font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;width:max-content;color:#fff}
+.marquee-track .sep{color:var(--yellow)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:.92rem;padding:.95rem 1.7rem;border-radius:16px;text-decoration:none;border:0;cursor:pointer;font-family:var(--font-body);transition:transform .1s,box-shadow .1s;box-shadow:0 4px 0 rgba(0,0,0,.15)}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.15)}
+.btn:active{transform:translateY(4px);box-shadow:none}
+.b-green{background:var(--green);color:#fff;box-shadow:0 4px 0 var(--green-d)}
+.b-green:hover{box-shadow:0 2px 0 var(--green-d)}
+.b-blue{background:var(--blue);color:#fff;box-shadow:0 4px 0 var(--blue-d)}
+.b-blue:hover{box-shadow:0 2px 0 var(--blue-d)}
+.b-red{background:var(--red);color:#fff;box-shadow:0 4px 0 var(--red-d)}
+.b-red:hover{box-shadow:0 2px 0 var(--red-d)}
+.b-purple{background:var(--purple);color:#fff;box-shadow:0 4px 0 var(--purple-d)}
+.b-purple:hover{box-shadow:0 2px 0 var(--purple-d)}
+.b-ghost{background:var(--paper);color:var(--blue);border:2px solid var(--line);box-shadow:0 4px 0 var(--line)}
+.b-ghost:hover{box-shadow:0 2px 0 var(--line)}
+.btn-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
+
+/* ============ CARDS ============ */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.card{background:var(--paper);border:2px solid var(--line);border-radius:var(--r-md);padding:1.8rem;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.card h3{font-family:var(--font-display);text-transform:uppercase;font-size:1.25rem;margin:.9rem 0 .5rem}
+.card p{font-size:.95rem;line-height:1.65;color:var(--ink-soft)}
+.card.tint-green{background:var(--green-bg);border-color:transparent}
+.card.tint-blue{background:var(--blue-bg);border-color:transparent}
+.card.tint-yellow{background:var(--yellow-bg);border-color:transparent}
+.card.tint-red{background:var(--red-bg);border-color:transparent}
+.card.tint-purple{background:var(--purple-bg);border-color:transparent}
+.card.tint-orange{background:var(--orange-bg);border-color:transparent}
+.card.tint-green p,.card.tint-blue p,.card.tint-yellow p,.card.tint-red p,.card.tint-purple p,.card.tint-orange p{color:#4a4a4a}
+.icon-chip{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.icon-chip svg{width:26px;height:26px;color:#fff}
+.ic-green{background:var(--green)}
+.ic-blue{background:var(--blue)}
+.ic-yellow{background:var(--yellow)}
+.ic-red{background:var(--red)}
+.ic-purple{background:var(--purple)}
+.ic-orange{background:var(--orange)}
+
+/* ============ STATS ============ */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;text-align:center}
+.stat{padding:1.8rem 1rem;border-radius:var(--r-md)}
+.stat .num{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);line-height:1}
+.stat .lbl{font-weight:800;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin-top:.5rem;color:var(--ink-soft)}
+
+/* ============ TIMELINE ============ */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:4px;border-radius:4px;background:var(--line)}
+.t-item{position:relative;background:var(--paper);border:2px solid var(--line);border-radius:var(--r-md);padding:1.4rem 1.6rem;margin-bottom:1.1rem;transition:transform .2s,box-shadow .2s}
+.t-item:hover{transform:translateX(6px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.t-item::before{content:"";position:absolute;left:-2rem;top:1.7rem;width:20px;height:20px;border-radius:50%;background:var(--green);border:3px solid var(--paper);box-shadow:0 0 0 3px var(--green-bg)}
+.t-item .yr{font-family:var(--font-display);font-size:1.1rem;text-transform:uppercase}
+.t-item p{margin-top:.3rem;line-height:1.65;color:var(--ink-soft);font-size:.95rem}
+
+/* ============ STEPS ============ */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.6rem;counter-reset:s}
+.step{background:var(--paper);border:2px solid var(--line);border-radius:var(--r-md);padding:1.6rem;padding-left:5.2rem;position:relative}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:1.5rem;left:1.5rem;width:46px;height:46px;border-radius:14px;background:var(--yellow);color:var(--ink);font-family:var(--font-display);font-size:1.35rem;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 0 var(--yellow-d)}
+.step h4{font-family:var(--font-display);text-transform:uppercase;font-size:1.1rem;margin-bottom:.45rem}
+.step p{font-size:.92rem;line-height:1.6;color:var(--ink-soft)}
+
+/* ============ TABS ============ */
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0 2rem}
+.tab{padding:.6rem 1.3rem;border-radius:999px;font-weight:800;font-size:.9rem;cursor:pointer;border:2px solid var(--line);background:var(--paper);color:var(--ink-soft);font-family:var(--font-body);transition:all .15s}
+.tab:hover{border-color:var(--blue);color:var(--blue)}
+.tab.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:pageIn .3s ease}
+
+/* ============ ACCORDION ============ */
+.acc{border:2px solid var(--line);border-radius:var(--r-sm);margin-bottom:.8rem;background:var(--paper);overflow:hidden}
+.acc summary{padding:1.15rem 1.4rem;font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--ink);transition:background .15s}
+.acc summary:hover{background:var(--mist)}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary .plus{font-family:var(--font-body);font-weight:400;font-size:1.9rem;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:var(--mist);color:var(--blue);line-height:1;transition:background .2s,color .2s}
+.acc[open] summary{background:var(--blue-bg)}
+.acc[open] summary .plus{background:var(--blue);color:#fff}
+.acc[open] .plus::before{content:"−"}
+.acc:not([open]) .plus::before{content:"+"}
+.acc .acc-body{padding:1.15rem 1.4rem;line-height:1.7;color:var(--ink-soft);border-top:2px solid var(--line)}
+
+/* ============ NOTICE / MISC ============ */
+.notice{display:flex;gap:1rem;align-items:flex-start;background:var(--yellow-bg);border-radius:var(--r-md);padding:1.4rem 1.6rem;margin-top:2.5rem}
+.notice svg{width:28px;height:28px;color:var(--yellow-d);flex-shrink:0;margin-top:.15rem}
+.notice p{font-size:.97rem;line-height:1.65}
+.notice.blue{background:var(--blue-bg)}
+.notice.blue svg{color:var(--blue-d)}
+.notice.green{background:var(--green-bg)}
+.notice.green svg{color:var(--green-d)}
+.notice.purple{background:var(--purple-bg)}
+.notice.purple svg{color:var(--purple-d)}
+.pill{display:inline-block;font-weight:800;font-size:.78rem;padding:.3rem .9rem;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+.p-open{background:var(--green-bg);color:var(--green-d)}
+.p-soon{background:var(--yellow-bg);color:var(--yellow-d)}
+.p-closed{background:var(--red-bg);color:var(--red-d)}
+.role-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+.role-head .icon-chip{width:58px;height:58px;border-radius:18px}
+.big-cta{background:linear-gradient(135deg,var(--green) 0%,var(--blue) 100%);border-radius:var(--r-lg);padding:3.2rem 2.5rem;text-align:center;color:#fff;position:relative;overflow:hidden}
+.big-cta h2{color:#fff}
+.big-cta p{color:rgba(255,255,255,.9);max-width:44rem;margin:0 auto;font-size:1.05rem;line-height:1.7}
+.video-frame{background:var(--mist);border:2px dashed var(--line);border-radius:var(--r-md);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;color:var(--ink-faint)}
+.video-frame svg{width:56px;height:56px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.photo-ph{background:var(--mist);border:2px dashed var(--line);border-radius:var(--r-md);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;color:var(--ink-faint);font-weight:700;font-size:.9rem}
+.photo-ph svg{width:40px;height:40px}
+
+/* ============ FLOATY DECO ============ */
+.floaty{position:absolute;pointer-events:none;opacity:.5}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--rot,0deg))}50%{transform:translateY(-12px) rotate(var(--rot,0deg))}}
+.bob{animation:bob 5s ease-in-out infinite}
+
+/* ============ FOOTER ============ */
+footer{background:#1F2937;color:#D1D5DB;margin-top:0}
+footer .wrap{padding-top:3.5rem;padding-bottom:2rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid #374151}
+.f-logo{display:flex;align-items:center;margin-bottom:1rem}
+.f-logo img{height:54px;width:auto;display:block}
+footer p{font-size:.95rem;line-height:1.7;color:#9CA3AF}
+footer h4{font-family:var(--font-display);color:#fff;text-transform:uppercase;font-size:1rem;margin-bottom:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.55rem}
+footer a{color:#9CA3AF;text-decoration:none;font-size:.93rem;font-weight:600;transition:color .15s}
+footer a:hover{color:var(--yellow)}
+.socials{display:flex;gap:.6rem;margin-top:1.2rem}
+.socials a{width:40px;height:40px;border-radius:12px;background:#374151;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+.socials a:hover{background:var(--green);transform:translateY(-2px)}
+.socials svg{width:20px;height:20px;color:#fff}
+.f-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:.8rem;font-size:.88rem;color:#6B7280}
+.f-bottom .hand{color:var(--yellow);font-size:1.1rem}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1020px){
+  .nav-links,.nav .cta-btn{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{margin-top:.5rem}
+  .grid3,.grid4{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .grid2,.grid3,.grid4{grid-template-columns:1fr}
+  .photo-grid{grid-template-columns:1fr 1fr}
+  .hero{padding-top:calc(76px + 2rem)}
+  .f-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ICONS -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1 5.6a2 2 0 0 0 1.8 0l3-1.5A1 1 0 0 1 20 5v12.8a1 1 0 0 1-.6.9l-4.5 1.8a2 2 0 0 1-1.4 0l-4-1.7a2 2 0 0 0-1.4 0l-3.2 1.3A1 1 0 0 1 4 19.2V6.4a1 1 0 0 1 .6-.9l4-1.6a2 2 0 0 1 1.4 0Z"/><path d="M15 5.8v15"/><path d="M9 3.2v15"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header>
+  <nav class="nav">
+    <a href="#/home" class="logo">
+      <img src="img/logo.png" alt="Kemenkeu Mengajar 11">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#/home" data-route="home">Home</a></li>
+      <li>
+        <button class="dropbtn" data-route-group="tentang">Tentang KM <span class="caret">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="#/tentang-kami">Tentang Kami</a></li>
+          <li><a href="#/perjalanan">Perjalanan KM</a></li>
+          <li><a href="#/panduan-umum">Panduan Umum</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="dropbtn" data-route-group="kegiatan">Kegiatan <span class="caret">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="#/briefing">Hari Briefing Nasional</a></li>
+          <li><a href="#/hari-mengajar">Hari Mengajar</a></li>
+          <li><a href="#/refleksi">Hari Refleksi</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="dropbtn" data-route-group="km11">KM 11 <span class="caret">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="#/panduan-km11">Panduan KM 11</a></li>
+          <li><a href="#/pengumuman">Pengumuman</a></li>
+          <li><a href="#/oprec">Open Recruitment</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="dropbtn" data-route-group="lomba">Lomba &amp; Karya <span class="caret">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="#/lomba">Lomba KM 11</a></li>
+          <li><a href="#/fotografi">Fotografi Terbaik</a></li>
+          <li><a href="#/aftermovie">After Movie Terbaik</a></li>
+        </ul>
+      </li>
+      <li>
+        <button class="dropbtn" data-route-group="bantuan">Bantuan <span class="caret">▾</span></button>
+        <ul class="dropdown">
+          <li><a href="#/faq">FAQ</a></li>
+          <li><a href="#/minjar">Tutorial Bertanya ke Minjar</a></li>
+        </ul>
+      </li>
+    </ul>
+    <a href="#/oprec" class="cta-btn">Daftar KM 11</a>
+    <button class="burger" id="burger" aria-label="Menu"><svg><use href="#i-menu"/></svg></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#/home">Home</a>
+    <a href="#/tentang-kami">Tentang Kami</a>
+    <a href="#/perjalanan">Perjalanan KM</a>
+    <a href="#/panduan-umum">Panduan Umum</a>
+    <a href="#/briefing">Hari Briefing Nasional</a>
+    <a href="#/hari-mengajar">Hari Mengajar</a>
+    <a href="#/refleksi">Hari Refleksi</a>
+    <a href="#/panduan-km11">Panduan KM 11</a>
+    <a href="#/pengumuman">Pengumuman</a>
+    <a href="#/oprec">Open Recruitment</a>
+    <a href="#/lomba">Lomba KM 11</a>
+    <a href="#/fotografi">Fotografi Terbaik</a>
+    <a href="#/aftermovie">After Movie Terbaik</a>
+    <a href="#/faq">FAQ</a>
+    <a href="#/minjar">Tutorial Bertanya ke Minjar</a>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<section class="page" data-page="home">
+  <div class="hero">
+    <svg class="floaty bob" style="--rot:12deg;top:12%;left:4%;width:54px;height:54px;color:var(--yellow)" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+    <svg class="floaty bob" style="--rot:-14deg;top:20%;right:6%;width:44px;height:44px;color:var(--purple);animation-delay:1.2s" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badges">
+          <span class="badge g">November 2026</span>
+          <span class="badge b">Seluruh Indonesia</span>
+          <span class="badge r">Edisi ke-11</span>
+        </div>
+        <h1 class="display">Satu Hari <span class="hl-green">Mengajar,</span><br>Selamanya <span class="hl-blue">Menginspirasi</span></h1>
+        <p class="lead">Kemenkeu Mengajar adalah gerakan tahunan pegawai Kementerian Keuangan untuk berbagi ilmu, inspirasi, dan motivasi kepada pelajar SD, SMP, dan SMA di seluruh penjuru Indonesia. Tahun 2026 ini, kita memasuki <strong>KM 11</strong>, sebelas tahun berkarya untuk negeri!</p>
+        <div class="btn-row">
+          <a href="#/oprec" class="btn b-green">Daftar Jadi Relawan</a>
+          <a href="#/tentang-kami" class="btn b-ghost">Kenali KM Lebih Dekat</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-note">Gaskeun, Sobat KM!</div>
+        <div class="hero-card">
+          <div class="hc-num hc1">11</div>
+          <div><div class="lbl">Tahun Berkarya</div><div class="sub">Sejak 2016 dan terus tumbuh</div></div>
+        </div>
+        <div class="hero-card">
+          <div class="hc-num hc2">34</div>
+          <div><div class="lbl">Provinsi Terjangkau</div><div class="sub">Dari Aceh sampai Papua</div></div>
+        </div>
+        <div class="hero-card">
+          <div class="hc-num hc3">1K+</div>
+          <div><div class="lbl">Sekolah Dikunjungi</div><div class="sub">SD, SMP, SMA sederajat</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Satu Hari Mengajar</span><span class="sep">✦</span>
+      <span>Selamanya Menginspirasi</span><span class="sep">✦</span>
+      <span>Kemenkeu Mengajar 11</span><span class="sep">✦</span>
+      <span>November 2026</span><span class="sep">✦</span>
+      <span>Satu Hari Mengajar</span><span class="sep">✦</span>
+      <span>Selamanya Menginspirasi</span><span class="sep">✦</span>
+      <span>Kemenkeu Mengajar 11</span><span class="sep">✦</span>
+      <span>November 2026</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- Tentang singkat -->
+  <div class="section">
+    <div class="wrap">
+      <span class="eyebrow green">halo, Sobat KM!</span>
+      <h2 class="title">Apa itu Kemenkeu Mengajar?</h2>
+      <div class="grid3" style="margin-top:2rem">
+        <div class="card tint-green">
+          <div class="icon-chip ic-green"><svg><use href="#i-book"/></svg></div>
+          <h3>Edukasi Keuangan Negara</h3>
+          <p>Materi sederhana tentang APBN, pajak, dan bagaimana negara mengelola keuangan. Semua disampaikan dengan cara yang seru dan mudah dipahami pelajar.</p>
+        </div>
+        <div class="card tint-red">
+          <div class="icon-chip ic-red"><svg><use href="#i-heart"/></svg></div>
+          <h3>Gerakan Kerelawanan</h3>
+          <p>Pegawai Kemenkeu turun langsung ke sekolah-sekolah sebagai relawan pengajar, fasilitator, dokumentator, dan panitia daerah.</p>
+        </div>
+        <div class="card tint-blue">
+          <div class="icon-chip ic-blue"><svg><use href="#i-sparkle"/></svg></div>
+          <h3>Serentak Nasional</h3>
+          <p>Dilaksanakan serentak di seluruh wilayah Indonesia pada satu hari yang sama, dari Sabang sampai Merauke.</p>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a href="#/tentang-kami" class="btn b-blue">Selengkapnya Tentang KM</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rangkaian kegiatan -->
+  <div class="section" style="background:var(--mist)">
+    <div class="wrap">
+      <span class="eyebrow purple">rangkaian kegiatan</span>
+      <h2 class="title">Tiga Hari, Satu Perjalanan Bermakna</h2>
+      <div class="grid3" style="margin-top:2rem">
+        <div class="card tint-yellow">
+          <div class="icon-chip ic-yellow"><svg><use href="#i-megaphone"/></svg></div>
+          <h3>Hari Briefing Nasional</h3>
+          <p>Sebelum terjun ke sekolah, seluruh relawan mengikuti pembekalan nasional. Ada materi mengajar, teknis pelaksanaan, dan semangat kebersamaan.</p>
+        </div>
+        <div class="card tint-purple">
+          <div class="icon-chip ic-purple"><svg><use href="#i-pencil"/></svg></div>
+          <h3>Hari Mengajar</h3>
+          <p>Puncak acara! Relawan mengajar di sekolah-sekolah serentak di seluruh Indonesia. Satu hari yang penuh tawa, cerita, dan inspirasi.</p>
+        </div>
+        <div class="card tint-green">
+          <div class="icon-chip ic-green"><svg><use href="#i-heart"/></svg></div>
+          <h3>Hari Refleksi</h3>
+          <p>Setelah Hari Mengajar, relawan berkumpul kembali untuk berbagi cerita, refleksi, dan apresiasi. Momen hangat penutup perjalanan.</p>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a href="#/briefing" class="btn b-purple">Lihat Detail Kegiatan</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section">
+    <div class="wrap">
+      <div class="big-cta">
+        <span class="eyebrow yellow" style="background:var(--yellow);color:var(--ink)">KM 11 | November 2026</span>
+        <h2 class="title">Open Recruitment KM 11 Segera Dibuka!</h2>
+        <p>Siap jadi bagian dari perjalanan inspiratif tahun ini? Ada empat peran yang bisa kamu pilih: <strong>Panitia Daerah, Relawan Pengajar, Fasilitator, dan Dokumentator</strong>. Jangan sampai ketinggalan!</p>
+        <div class="btn-row" style="justify-content:center">
+          <a href="#/oprec" class="btn" style="background:var(--paper);color:var(--ink);box-shadow:0 4px 0 rgba(0,0,0,.25)">Lihat Peran Relawan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lomba preview -->
+  <div class="section" style="background:var(--yellow-bg)">
+    <div class="wrap">
+      <span class="eyebrow red">lomba &amp; karya</span>
+      <h2 class="title">Tunjukkan Kreativitasmu!</h2>
+      <div class="grid3" style="margin-top:2rem">
+        <div class="card">
+          <div class="icon-chip ic-red"><svg><use href="#i-trophy"/></svg></div>
+          <h3>Lomba KM 11</h3>
+          <p>Berbagai kategori lomba untuk menyemarakkan penyelenggaraan KM 11. Melalui karya, tunjukkan kreativitasmu!</p>
+        </div>
+        <div class="card">
+          <div class="icon-chip ic-blue"><svg><use href="#i-camera"/></svg></div>
+          <h3>Fotografi Terbaik</h3>
+          <p>Apresiasi untuk relawan dokumentator yang mengabadikan senyum, tawa, dan haru lewat jepretan terbaik.</p>
+        </div>
+        <div class="card">
+          <div class="icon-chip ic-purple"><svg><use href="#i-play"/></svg></div>
+          <h3>After Movie Terbaik</h3>
+          <p>Karya video terbaik yang merangkum kehangatan Hari Mengajar menjadi cerita yang abadi.</p>
+        </div>
+      </div>
+      <div class="btn-row">
+        <a href="#/lomba" class="btn b-red">Jelajahi Lomba &amp; Karya</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TENTANG KAMI ============ -->
+<section class="page" data-page="tentang-kami">
+  <div class="section" style="background:var(--green-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-green">tentang km</span>
+      <h2 class="title">Tentang Kami</h2>
+      <p class="lead" style="max-width:56rem">Gerakan mengajar yang lahir dari kerelaan hati pegawai Kementerian Keuangan, untuk anak-anak Indonesia.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid2">
+        <div class="card tint-green">
+          <h3 style="margin-top:0">Apa itu Kemenkeu Mengajar?</h3>
+          <p>Kemenkeu Mengajar merupakan kegiatan tahunan yang diinisiasi oleh pegawai Kementerian Keuangan, berupa pemberian pendidikan dan pengajaran kepada pelajar SD, SMP, SMA, dan sederajat di seluruh wilayah Indonesia.</p>
+          <p style="margin-top:.7rem">Kegiatan ini murni kerelawanan. Para pegawai meluangkan waktu dan tenaga untuk berbagi inspirasi di luar tugas kedinasan mereka.</p>
+        </div>
+        <div class="card tint-blue">
+          <h3 style="margin-top:0">Visi &amp; Misi</h3>
+          <p><strong>Visi:</strong> Membangun generasi Indonesia yang melek keuangan negara dan termotivasi meraih mimpi.</p>
+          <p style="margin-top:.7rem"><strong>Misi:</strong> Berbagi ilmu dan inspirasi kepada pelajar, memperkenalkan peran Kementerian Keuangan, serta menumbuhkan semangat belajar dan berkontribusi untuk negeri.</p>
+        </div>
+        <div class="card tint-purple">
+          <h3 style="margin-top:0">Siapa Relawannya?</h3>
+          <p>Relawan Kemenkeu Mengajar merupakan pegawai Kementerian Keuangan yang mengajar pelajar SD, SMP, SMA, dan sederajat di seluruh wilayah Indonesia secara sukarela.</p>
+          <p style="margin-top:.7rem">Mereka berasal dari berbagai unit eselon I Kemenkeu, mulai dari pejabat hingga staf, yang meluangkan waktu dan tenaga untuk berbagi.</p>
+        </div>
+        <div class="card tint-yellow">
+          <h3 style="margin-top:0">Apa yang Diajarkan?</h3>
+          <p>Materi yang dibawakan meliputi pengenalan keuangan negara dan APBN secara sederhana, pentingnya pendidikan, nilai integritas, serta motivasi meraih mimpi.</p>
+          <p style="margin-top:.7rem">Semua disampaikan dengan metode interaktif seperti permainan, cerita, dan diskusi, agar pelajar antusias belajar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background:var(--mist)">
+    <div class="wrap" style="text-align:center">
+      <span class="eyebrow blue">angka bicara</span>
+      <h2 class="title">Dampak dalam Angka</h2>
+      <div class="stats" style="margin-top:2rem">
+        <div class="stat" style="background:var(--yellow-bg)"><div class="num" style="color:var(--yellow-d)">11</div><div class="lbl">Tahun Berjalan</div></div>
+        <div class="stat" style="background:var(--green-bg)"><div class="num" style="color:var(--green-d)">34</div><div class="lbl">Provinsi</div></div>
+        <div class="stat" style="background:var(--blue-bg)"><div class="num" style="color:var(--blue-d)">1K+</div><div class="lbl">Sekolah</div></div>
+        <div class="stat" style="background:var(--red-bg)"><div class="num" style="color:var(--red-d)">10K+</div><div class="lbl">Relawan</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERJALANAN KM ============ -->
+<section class="page" data-page="perjalanan">
+  <div class="section" style="background:var(--blue-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-blue">perjalanan km</span>
+      <h2 class="title">Satu Dekade Lebih Menginspirasi Negeri</h2>
+      <p class="lead" style="max-width:56rem">Tahun 2016 menjadi titik awal lahirnya sebuah gerakan mulia: Kemenkeu Mengajar. Kini memasuki tahun ke-11, gerakan ini terus tumbuh.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap" style="max-width:860px">
+      <div class="timeline">
+        <div class="t-item"><div class="yr" style="color:var(--red)">2016 · KM 1</div><p>Titik awal lahirnya Kemenkeu Mengajar. Sekelompok pegawai Kemenkeu berinisiatif kembali ke sekolah untuk berbagi inspirasi tentang keuangan negara dan pentingnya pendidikan.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--blue)">2017 · KM 2</div><p>Gerakan mulai terorganisir. Jumlah relawan dan sekolah sasaran bertambah, format Hari Mengajar semakin matang.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--purple)">2018 · KM 3</div><p>Jangkauan meluas ke lebih banyak daerah. Kemenkeu Mengajar menjadi agenda tahunan yang dinantikan.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--green)">2019 · KM 4</div><p>Semakin banyak pegawai muda terlibat. Materi dan metode mengajar terus dikembangkan agar makin interaktif.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--orange)">2020-2021 · KM 5 &amp; 6</div><p>Era pandemi tidak menghentikan semangat berbagi. KM beradaptasi dengan format baru agar tetap menjangkau pelajar di seluruh Indonesia.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--blue)">2022 · KM 7</div><p>Kembali bertatap muka! Antusiasme relawan dan sekolah meledak setelah dua tahun berjarak.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--purple)">2023 · KM 8</div><p>Kolaborasi makin kuat dengan peran relawan yang makin beragam: pengajar, fasilitator, hingga dokumentator.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--green)">2024 · KM 9</div><p>Sembilan tahun menginspirasi negeri. Cerita-cerita inspiratif relawan mulai dibagikan lewat program Panda Inspiratif.</p></div>
+        <div class="t-item"><div class="yr" style="color:var(--red)">2025 · KM 10</div><p><strong>Satu Dekade Berkontribusi dalam Membangun Negeri!</strong> Perayaan 10 tahun Kemenkeu Mengajar dengan partisipasi terbesar dalam sejarah gerakan ini.</p></div>
+        <div class="t-item" style="background:var(--yellow-bg);border-color:transparent"><div class="yr" style="color:var(--yellow-d)">2026 · KM 11</div><p style="color:#4a4a4a"><strong>Babak baru dimulai!</strong> Sebelas tahun berkarya untuk negeri, November 2026. Kamu bagian dari cerita ini?</p></div>
+      </div>
+      <div class="notice blue">
+        <svg><use href="#i-sparkle"/></svg>
+        <p><strong>Satu hari mengajar, selamanya menginspirasi.</strong> Setiap tahun, cerita baru lahir dari ruang-ruang kelas di seluruh Indonesia. KM 11 siap menuliskan babak berikutnya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANDUAN UMUM ============ -->
+<section class="page" data-page="panduan-umum">
+  <div class="section" style="background:var(--purple-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-purple">panduan umum</span>
+      <h2 class="title">Panduan Umum Kemenkeu Mengajar</h2>
+      <p class="lead" style="max-width:56rem">Semua yang perlu kamu tahu sebelum ikut serta, dari alur kegiatan sampai peran relawan.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <h3 class="display" style="font-size:1.5rem;margin-bottom:1.2rem">Empat Peran Relawan</h3>
+      <div class="grid2" style="margin-bottom:3.5rem">
+        <div class="card tint-yellow">
+          <h3 style="margin-top:0">Panitia Daerah</h3>
+          <p>Penggerak KM di tingkat daerah. Bertugas mengoordinasikan sekolah, relawan, dan memastikan acara berjalan lancar di wilayahnya.</p>
+        </div>
+        <div class="card tint-green">
+          <h3 style="margin-top:0">Relawan Pengajar</h3>
+          <p>Wajah utama KM di depan kelas. Menyampaikan materi keuangan negara dan motivasi dengan cara yang seru dan interaktif.</p>
+        </div>
+        <div class="card tint-red">
+          <h3 style="margin-top:0">Relawan Fasilitator</h3>
+          <p>Penggerak utama yang memastikan KM berjalan lancar di sekolah-sekolah. Mulai dari mengatur jalannya acara, mendampingi pengajar, sampai menjaga energi kelas.</p>
+        </div>
+        <div class="card tint-purple">
+          <h3 style="margin-top:0">Relawan Dokumentator</h3>
+          <p>Mata dan pena KM. Mengabadikan momen berharga lewat foto dan video, serta mengemasnya menjadi karya yang menginspirasi.</p>
+        </div>
+      </div>
+      <h3 class="display" style="font-size:1.5rem;margin-bottom:1.2rem">Alur Kegiatan</h3>
+      <div class="steps">
+        <div class="step"><h4>Pendaftaran</h4><p>Daftar sebagai relawan pada periode Open Recruitment KM 11 melalui kanal resmi yang diumumkan.</p></div>
+        <div class="step"><h4>Hari Briefing Nasional</h4><p>Ikuti pembekalan nasional untuk memahami materi, teknis, dan semangat KM.</p></div>
+        <div class="step"><h4>Hari Mengajar</h4><p>Terjun ke sekolah dan berbagi inspirasi bersama ribuan relawan lainnya, serentak se-Indonesia.</p></div>
+        <div class="step"><h4>Hari Refleksi</h4><p>Berbagi cerita dan makna bersama relawan lain setelah Hari Mengajar usai.</p></div>
+      </div>
+      <div class="notice green">
+        <svg><use href="#i-heart"/></svg>
+        <p><strong>Tidak ada biaya pendaftaran.</strong> Kemenkeu Mengajar adalah gerakan kerelawanan yang murni berlandaskan semangat berbagi untuk negeri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRIEFING ============ -->
+<section class="page" data-page="briefing">
+  <div class="section" style="background:var(--yellow-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-yellow">kegiatan</span>
+      <h2 class="title">Hari Briefing Nasional</h2>
+      <p class="lead" style="max-width:56rem">Pembekalan serentak untuk seluruh relawan sebelum terjun ke sekolah-sekolah.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid2">
+        <div class="card tint-yellow">
+          <div class="icon-chip ic-yellow"><svg><use href="#i-megaphone"/></svg></div>
+          <h3>Apa itu Hari Briefing Nasional?</h3>
+          <p>Hari Briefing Nasional adalah pembekalan yang wajib diikuti seluruh relawan KM 11. Di sini, relawan mendapatkan materi mengajar, panduan teknis pelaksanaan di sekolah, dan arahan dari panitia pusat.</p>
+        </div>
+        <div class="card tint-blue">
+          <div class="icon-chip ic-blue"><svg><use href="#i-users"/></svg></div>
+          <h3>Apa saja yang didapat?</h3>
+          <p>Materi pengajaran per jenjang (SD, SMP, SMA), tips mengelola kelas yang seru, simulasi mengajar, serta kesempatan berdiskusi dan berjejaring dengan relawan lain dari seluruh Indonesia.</p>
+        </div>
+      </div>
+      <div class="notice">
+        <svg><use href="#i-cal"/></svg>
+        <p><strong>Wajib hadir!</strong> Briefing adalah bekal pentingmu sebelum Hari Mengajar. Jadwal dan tautan briefing akan diumumkan di halaman Pengumuman, jadi pantau terus ya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HARI MENGAJAR ============ -->
+<section class="page" data-page="hari-mengajar">
+  <div class="section" style="background:var(--red-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-red">kegiatan</span>
+      <h2 class="title">Hari Mengajar</h2>
+      <p class="lead" style="max-width:56rem">Satu hari, untuk pengalaman berkesan selamanya.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <p class="lead" style="max-width:56rem">Hari Mengajar dilaksanakan serentak oleh relawan Kemenkeu Mengajar di berbagai sekolah di seluruh wilayah Indonesia. Inilah puncak dari seluruh rangkaian kegiatan, hari di mana ribuan relawan berdiri di depan kelas dan berbagi cerita, ilmu, dan semangat.</p>
+      <div class="grid3" style="margin-top:2.5rem">
+        <div class="card tint-green">
+          <div class="icon-chip ic-green"><svg><use href="#i-book"/></svg></div>
+          <h3>Jenjang SD</h3>
+          <p>Materi disampaikan lewat permainan, lagu, dan cerita. Anak-anak diajak mengenal uang, menabung, dan mimpi-mimpi besar.</p>
+        </div>
+        <div class="card tint-red">
+          <div class="icon-chip ic-red"><svg><use href="#i-pencil"/></svg></div>
+          <h3>Jenjang SMP</h3>
+          <p>Mulai mengenal konsep anggaran, pajak sederhana, dan pentingnya merencanakan masa depan lewat pendidikan.</p>
+        </div>
+        <div class="card tint-blue">
+          <div class="icon-chip ic-blue"><svg><use href="#i-sparkle"/></svg></div>
+          <h3>Jenjang SMA</h3>
+          <p>Diskusi lebih dalam tentang APBN, peran Kemenkeu, karier, dan bagaimana generasi muda bisa berkontribusi untuk negeri.</p>
+        </div>
+      </div>
+      <div class="big-cta" style="margin-top:2.5rem;padding:2.4rem">
+        <div class="hand" style="font-size:1.7rem;color:#fff">Hari Mengajar KM 11, November 2026</div>
+        <p style="margin-top:.6rem">Tanggal pasti akan diumumkan di halaman Pengumuman. Siapkan dirimu!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HARI REFLEKSI ============ -->
+<section class="page" data-page="refleksi">
+  <div class="section" style="background:var(--green-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-green">kegiatan</span>
+      <h2 class="title">Hari Refleksi</h2>
+      <p class="lead" style="max-width:56rem">Momen berbagi cerita dan makna setelah Hari Mengajar.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid2" style="margin-top:.5rem">
+        <div class="card tint-yellow">
+          <h3 style="margin-top:0">Apa yang dilakukan?</h3>
+          <p>Relawan berkumpul untuk berbagi cerita dari sekolah masing-masing. Ada momen lucu, haru, dan membanggakan. Foto dan video terbaik diputar, dan relawan saling mengapresiasi.</p>
+        </div>
+        <div class="card tint-purple">
+          <h3 style="margin-top:0">Kenapa penting?</h3>
+          <p>Hari Refleksi adalah ruang untuk mensyukuri perjalanan, belajar dari pengalaman, dan memupuk semangat untuk terus berbagi di tahun-tahun berikutnya.</p>
+        </div>
+      </div>
+      <div class="notice green">
+        <svg><use href="#i-heart"/></svg>
+        <p><strong>Cerita terbaik</strong> dari Hari Refleksi berkesempatan ditampilkan di program <strong>Panda Inspiratif</strong>, panggung cerita para relawan KM yang menggerakkan hati.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANDUAN KM 11 ============ -->
+<section class="page" data-page="panduan-km11">
+  <div class="section" style="background:var(--orange-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-orange">km 11</span>
+      <h2 class="title">Panduan KM 11</h2>
+      <p class="lead" style="max-width:56rem">Panduan resmi penyelenggaraan Kemenkeu Mengajar 11 untuk seluruh relawan.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid3">
+        <div class="card tint-red">
+          <div class="icon-chip ic-red"><svg><use href="#i-book"/></svg></div>
+          <h3>Materi Mengajar</h3>
+          <p>Modul dan slide presentasi untuk jenjang SD, SMP, dan SMA. Sudah disesuaikan dengan karakteristik tiap kelompok usia.</p>
+          <span class="pill p-soon" style="display:inline-block;margin-top:1rem">Segera hadir</span>
+        </div>
+        <div class="card tint-blue">
+          <div class="icon-chip ic-blue"><svg><use href="#i-users"/></svg></div>
+          <h3>Panduan Relawan</h3>
+          <p>Buku saku relawan: tugas tiap peran, alur kegiatan, kode etik, dan tips berinteraksi dengan pelajar dan pihak sekolah.</p>
+          <span class="pill p-soon" style="display:inline-block;margin-top:1rem">Segera hadir</span>
+        </div>
+        <div class="card tint-purple">
+          <div class="icon-chip ic-purple"><svg><use href="#i-map"/></svg></div>
+          <h3>Panduan Panitia Daerah</h3>
+          <p>Panduan teknis untuk panitia daerah: koordinasi sekolah, logistik, pembagian tugas, dan pelaporan kegiatan.</p>
+          <span class="pill p-soon" style="display:inline-block;margin-top:1rem">Segera hadir</span>
+        </div>
+      </div>
+      <div class="notice blue">
+        <svg><use href="#i-megaphone"/></svg>
+        <p>Dokumen panduan KM 11 akan diunggah di halaman ini dan diumumkan melalui kanal resmi. Pantau terus halaman <strong>Pengumuman</strong> ya!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PENGUMUMAN ============ -->
+<section class="page" data-page="pengumuman">
+  <div class="section" style="background:var(--red-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-red">km 11</span>
+      <h2 class="title">Pengumuman</h2>
+      <p class="lead" style="max-width:56rem">Halo Sobat KM, ada beberapa pengumuman penting untuk kamu! Pantau halaman ini secara berkala ya.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap" style="max-width:860px">
+      <div class="card" style="margin-bottom:1rem">
+        <span class="pill p-soon">Segera</span>
+        <h3>Open Recruitment KM 11</h3>
+        <p>Pendaftaran relawan KM 11 akan segera dibuka! Ada empat peran yang bisa kamu pilih: Panitia Daerah, Relawan Pengajar, Fasilitator, dan Dokumentator. Siapkan dirimu dan pantau terus kanal resmi KM.</p>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <span class="pill p-soon">Segera</span>
+        <h3>Jadwal Hari Briefing Nasional</h3>
+        <p>Pembekalan nasional untuk seluruh relawan KM 11. Jadwal, tautan, dan teknisnya akan diumumkan setelah masa pendaftaran dibuka.</p>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <span class="pill p-soon">Segera</span>
+        <h3>Tanggal Hari Mengajar KM 11</h3>
+        <p>Hari Mengajar KM 11 akan dilaksanakan pada November 2026, serentak di seluruh Indonesia. Tanggal pastinya menyusul, ditunggu ya!</p>
+      </div>
+      <div class="notice">
+        <svg><use href="#i-megaphone"/></svg>
+        <p>Pengumuman resmi juga disampaikan lewat media sosial Kemenkeu Mengajar. Follow Instagram, X, TikTok, dan YouTube kami (tautan ada di footer) biar nggak ketinggalan info!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPREC ============ -->
+<section class="page" data-page="oprec">
+  <div class="section" style="background:var(--blue-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-blue">km 11</span>
+      <h2 class="title">Open Recruitment KM 11</h2>
+      <p class="lead" style="max-width:56rem">Hai Sobat KM! Apakah kamu sudah siap menjadi bagian dari perjalanan inspiratif? Pilih peranmu di bawah ini!</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="tabs">
+        <button class="tab active" data-tab="panitia">Panitia Daerah</button>
+        <button class="tab" data-tab="pengajar">Relawan Pengajar</button>
+        <button class="tab" data-tab="fasilitator">Fasilitator</button>
+        <button class="tab" data-tab="dokumentator">Dokumentator</button>
+      </div>
+
+      <div class="tab-panel active" data-panel="panitia">
+        <div class="card tint-yellow">
+          <div class="role-head">
+            <div class="icon-chip ic-yellow"><svg><use href="#i-map"/></svg></div>
+            <div>
+              <h3 style="margin:0">Panitia Daerah</h3>
+              <span class="pill p-soon">Pendaftaran segera dibuka</span>
+            </div>
+          </div>
+          <p>Panitia Daerah adalah penggerak Kemenkeu Mengajar di tingkat wilayah. Kamu akan menjadi jembatan antara panitia pusat, sekolah, dan relawan di daerahmu.</p>
+          <div style="margin-top:1.4rem">
+            <h4 class="display" style="font-size:1.2rem;margin-bottom:.8rem">Tugas utama:</h4>
+            <div class="steps" style="grid-template-columns:1fr">
+              <div class="step"><h4>Koordinasi Sekolah</h4><p>Menghubungi dan mengonfirmasi kesiapan sekolah sasaran di daerahmu.</p></div>
+              <div class="step"><h4>Mengelola Relawan</h4><p>Mengatur penempatan relawan ke sekolah-sekolah dan memastikan semua berjalan sesuai rencana.</p></div>
+              <div class="step"><h4>Eksekusi Hari-H</h4><p>Memastikan Hari Mengajar di daerahmu berjalan lancar dari awal sampai akhir.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="pengajar">
+        <div class="card tint-green">
+          <div class="role-head">
+            <div class="icon-chip ic-green"><svg><use href="#i-pencil"/></svg></div>
+            <div>
+              <h3 style="margin:0">Relawan Pengajar</h3>
+              <span class="pill p-soon">Pendaftaran segera dibuka</span>
+            </div>
+          </div>
+          <p>Relawan Pengajar adalah wajah Kemenkeu Mengajar di depan kelas. Kamu akan mengajarkan materi keuangan negara dan berbagi inspirasi kepada pelajar.</p>
+          <div style="margin-top:1.4rem">
+            <h4 class="display" style="font-size:1.2rem;margin-bottom:.8rem">Tugas utama:</h4>
+            <div class="steps" style="grid-template-columns:1fr">
+              <div class="step"><h4>Menyampaikan Materi</h4><p>Mengajarkan materi keuangan negara dan motivasi belajar dengan metode interaktif sesuai jenjang.</p></div>
+              <div class="step"><h4>Membangun Koneksi</h4><p>Menciptakan suasana kelas yang hangat, seru, dan penuh semangat bersama para pelajar.</p></div>
+              <div class="step"><h4>Menginspirasi</h4><p>Berbagi cerita perjalanan pribadi, dari bangku sekolah hingga berkarya di Kementerian Keuangan.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="fasilitator">
+        <div class="card tint-red">
+          <div class="role-head">
+            <div class="icon-chip ic-red"><svg><use href="#i-heart"/></svg></div>
+            <div>
+              <h3 style="margin:0">Relawan Fasilitator</h3>
+              <span class="pill p-soon">Pendaftaran segera dibuka</span>
+            </div>
+          </div>
+          <p>Fasilitator adalah penggerak utama yang memastikan Kemenkeu Mengajar berjalan lancar di sekolah-sekolah. Kamu adalah partner pengajar di dalam kelas.</p>
+          <div style="margin-top:1.4rem">
+            <h4 class="display" style="font-size:1.2rem;margin-bottom:.8rem">Tugas utama:</h4>
+            <div class="steps" style="grid-template-columns:1fr">
+              <div class="step"><h4>Mendampingi Pengajar</h4><p>Membantu jalannya sesi mengajar, dari ice breaking sampai penutup.</p></div>
+              <div class="step"><h4>Menjaga Energi Kelas</h4><p>Memastikan pelajar tetap antusias dan terlibat selama kegiatan berlangsung.</p></div>
+              <div class="step"><h4>Koordinasi Lapangan</h4><p>Menjadi penghubung antara tim di sekolah dengan panitia daerah.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="dokumentator">
+        <div class="card tint-purple">
+          <div class="role-head">
+            <div class="icon-chip ic-purple"><svg><use href="#i-camera"/></svg></div>
+            <div>
+              <h3 style="margin:0">Relawan Dokumentator</h3>
+              <span class="pill p-soon">Pendaftaran segera dibuka</span>
+            </div>
+          </div>
+          <p>Dokumentator adalah mata dan pena Kemenkeu Mengajar. Kamu mengabadikan setiap momen berharga dan mengubahnya menjadi karya yang menginspirasi banyak orang.</p>
+          <div style="margin-top:1.4rem">
+            <h4 class="display" style="font-size:1.2rem;margin-bottom:.8rem">Tugas utama:</h4>
+            <div class="steps" style="grid-template-columns:1fr">
+              <div class="step"><h4>Fotografi</h4><p>Mengabadikan momen mengajar, interaksi, dan emosi di kelas. Siapa tahu jadi Karya Fotografi Terbaik!</p></div>
+              <div class="step"><h4>Videografi</h4><p>Merekam jalannya acara dan menyunting after movie sekolah. Siapa tahu jadi After Movie Terbaik!</p></div>
+              <div class="step"><h4>Konten Media Sosial</h4><p>Membuat konten seru selama acara untuk menyemarakkan KM 11 di media sosial.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="big-cta" style="margin-top:3rem;padding:2.6rem">
+        <h2 class="title" style="font-size:clamp(1.6rem,3vw,2.4rem)">Tertarik Jadi Bagian KM 11?</h2>
+        <p>Tautan pendaftaran akan dibuka di halaman ini saat periode Open Recruitment dimulai. Pantau terus ya!</p>
+        <div class="btn-row" style="justify-content:center">
+          <a href="#/pengumuman" class="btn" style="background:var(--paper);color:var(--ink);box-shadow:0 4px 0 rgba(0,0,0,.25)">Cek Halaman Pengumuman</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOMBA ============ -->
+<section class="page" data-page="lomba">
+  <div class="section" style="background:var(--yellow-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-yellow">lomba &amp; karya</span>
+      <h2 class="title">Lomba KM 11</h2>
+      <p class="lead" style="max-width:56rem">Melalui karya, tunjukkan kreativitasmu! Berbagai kategori lomba untuk menyemarakkan penyelenggaraan KM 11.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid3">
+        <div class="card tint-red">
+          <div class="icon-chip ic-red"><svg><use href="#i-camera"/></svg></div>
+          <h3>Karya Fotografi Terbaik</h3>
+          <p>Untuk relawan dokumentator dengan jepretan paling berkesan selama Hari Mengajar. Abadikan senyum, tawa, dan haru di ruang kelas!</p>
+        </div>
+        <div class="card tint-purple">
+          <div class="icon-chip ic-purple"><svg><use href="#i-play"/></svg></div>
+          <h3>After Movie Terbaik</h3>
+          <p>Untuk tim dokumentator dengan video rangkuman kegiatan paling kreatif dan menyentuh. Ceritakan KM 11 versimu!</p>
+        </div>
+        <div class="card tint-blue">
+          <div class="icon-chip ic-blue"><svg><use href="#i-trophy"/></svg></div>
+          <h3>Kategori Lainnya</h3>
+          <p>Akan ada kategori lomba tambahan yang diumumkan mendekati Hari Mengajar. Nantikan kejutannya!</p>
+        </div>
+      </div>
+      <div class="notice">
+        <svg><use href="#i-trophy"/></svg>
+        <p><strong>Ketentuan lengkap</strong> lomba KM 11 seperti tema, timeline, hadiah, dan mekanisme penjurian akan diumumkan mendekati Hari Mengajar. Nantikan!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOTOGRAFI ============ -->
+<section class="page" data-page="fotografi">
+  <div class="section" style="background:var(--blue-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-blue">lomba &amp; karya</span>
+      <h2 class="title">Fotografi Terbaik</h2>
+      <p class="lead" style="max-width:56rem">Galeri apresiasi untuk para relawan dokumentator yang menemani tiap senyum, tawa, dan haru lewat jepretan terbaik.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="photo-grid">
+        <div class="photo-ph"><svg><use href="#i-camera"/></svg><span>Foto KM 11</span></div>
+        <div class="photo-ph"><svg><use href="#i-camera"/></svg><span>Foto KM 11</span></div>
+        <div class="photo-ph"><svg><use href="#i-camera"/></svg><span>Foto KM 11</span></div>
+        <div class="photo-ph"><svg><use href="#i-camera"/></svg><span>Foto KM 11</span></div>
+        <div class="photo-ph"><svg><use href="#i-camera"/></svg><span>Foto KM 11</span></div>
+        <div class="photo-ph"><svg><use href="#i-camera"/></svg><span>Foto KM 11</span></div>
+      </div>
+      <div class="notice blue">
+        <svg><use href="#i-camera"/></svg>
+        <p>Galeri karya fotografi terbaik KM 11 akan ditampilkan di sini setelah Hari Mengajar. Untuk sekarang, intip karya-karya terbaik tahun lalu di media sosial Kemenkeu Mengajar ya!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFTER MOVIE ============ -->
+<section class="page" data-page="aftermovie">
+  <div class="section" style="background:var(--purple-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-purple">lomba &amp; karya</span>
+      <h2 class="title">After Movie Terbaik</h2>
+      <p class="lead" style="max-width:56rem">Karya video terbaik yang merangkum kehangatan Hari Mengajar menjadi cerita yang abadi.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap" style="max-width:860px">
+      <div class="video-frame">
+        <svg><use href="#i-play"/></svg>
+        <strong>After Movie KM 11 akan tayang di sini</strong>
+        <span style="font-size:.9rem">Sambil menunggu, tonton after movie tahun-tahun sebelumnya di YouTube Kemenkeu Mengajar</span>
+      </div>
+      <div class="notice purple">
+        <svg><use href="#i-play"/></svg>
+        <p><strong>Punya bakat videografi?</strong> Daftar jadi Relawan Dokumentator di KM 11 dan ciptakan after movie terbaik versimu!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="page" data-page="faq">
+  <div class="section" style="background:var(--green-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-green">bantuan</span>
+      <h2 class="title">FAQ</h2>
+      <p class="lead" style="max-width:56rem">Punya pertanyaan seputar Kemenkeu Mengajar? Tenang, Kak! Cek FAQ di bawah ini ya.</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap" style="max-width:820px">
+      <details class="acc" open><summary>Apa itu Kemenkeu Mengajar? <span class="plus"></span></summary><div class="acc-body">Kemenkeu Mengajar adalah kegiatan tahunan yang diinisiasi oleh pegawai Kementerian Keuangan, berupa pemberian pendidikan dan pengajaran kepada pelajar SD, SMP, SMA, dan sederajat di seluruh wilayah Indonesia. KM 11 akan dilaksanakan pada November 2026.</div></details>
+      <details class="acc"><summary>Siapa yang bisa menjadi relawan? <span class="plus"></span></summary><div class="acc-body">Relawan Kemenkeu Mengajar adalah pegawai Kementerian Keuangan yang secara sukarela mendaftar pada periode Open Recruitment. Ada empat peran yang bisa dipilih: Panitia Daerah, Relawan Pengajar, Fasilitator, dan Dokumentator.</div></details>
+      <details class="acc"><summary>Kapan pendaftaran KM 11 dibuka? <span class="plus"></span></summary><div class="acc-body">Jadwal Open Recruitment KM 11 akan diumumkan melalui halaman Pengumuman di situs ini dan media sosial resmi Kemenkeu Mengajar. Pastikan kamu mengikuti kanal-kanal tersebut agar tidak ketinggalan.</div></details>
+      <details class="acc"><summary>Apakah relawan boleh memilih sekolah sendiri? <span class="plus"></span></summary><div class="acc-body">Relawan bisa mengusulkan sekolah, misalnya almamater atau sekolah di kampung halaman. Tapi penempatan akhir ditentukan oleh Panitia Daerah berdasarkan kebutuhan dan ketersediaan kuota di tiap sekolah.</div></details>
+      <details class="acc"><summary>Apa saja rangkaian kegiatan yang wajib diikuti? <span class="plus"></span></summary><div class="acc-body">Seluruh relawan diharapkan mengikuti tiga rangkaian utama: Hari Briefing Nasional (pembekalan), Hari Mengajar (pelaksanaan di sekolah), dan Hari Refleksi (evaluasi dan perayaan bersama).</div></details>
+      <details class="acc"><summary>Apakah ada biaya pendaftaran? <span class="plus"></span></summary><div class="acc-body">Tidak ada biaya pendaftaran. Kemenkeu Mengajar adalah gerakan kerelawanan yang murni berlandaskan semangat berbagi.</div></details>
+      <details class="acc"><summary>Bagaimana cara bertanya jika pertanyaanku belum terjawab? <span class="plus"></span></summary><div class="acc-body">Kamu bisa bertanya langsung ke Minjar, contact center Kemenkeu Mengajar. Lihat panduan lengkapnya di halaman Tutorial Bertanya ke Minjar pada menu Bantuan.</div></details>
+      <div class="btn-row" style="justify-content:center;margin-top:2.5rem">
+        <a href="#/minjar" class="btn b-green">Tanya Minjar Sekarang</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MINJAR ============ -->
+<section class="page" data-page="minjar">
+  <div class="section" style="background:var(--orange-bg)">
+    <div class="wrap">
+      <span class="eyebrow solid-orange">bantuan</span>
+      <h2 class="title">Tutorial Bertanya ke Minjar</h2>
+      <p class="lead" style="max-width:56rem">Hai Sobat KM! Masih bingung cari info teknis atau persiapan Kemenkeu Mengajar 11? Tenang, sekarang ada cara gampang!</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="wrap">
+      <div class="grid2">
+        <div class="card tint-orange">
+          <h3 class="display" style="font-size:1.4rem;margin-bottom:1rem;margin-top:0">Dua cara gampang bertanya:</h3>
+          <div class="steps" style="grid-template-columns:1fr">
+            <div class="step"><h4>Kemenkeu Pedia</h4><p>Buka platform Kemenkeu Pedia dan ketik pertanyaanmu seputar Kemenkeu Mengajar. Jawaban langsung muncul dari basis pengetahuan resmi.</p></div>
+            <div class="step"><h4>Tanya Minjar</h4><p>Chat langsung dengan Minjar, contact center Kemenkeu Mengajar, untuk pertanyaan seputar teknis pendaftaran, jadwal, dan persiapan kegiatan.</p></div>
+          </div>
+        </div>
+        <div class="card tint-purple">
+          <div class="icon-chip ic-purple"><svg><use href="#i-chat"/></svg></div>
+          <h3>Siapa itu Minjar?</h3>
+          <p>Minjar adalah contact center resmi Kemenkeu Mengajar yang siap menjawab pertanyaanmu. Mulai dari jadwal pendaftaran, syarat relawan, sampai teknis Hari Mengajar. Tanya apa saja, Minjar siap membantu!</p>
+          <p class="hand" style="margin-top:1rem;font-size:1.4rem;color:var(--purple-d)">"Ada Minjar, nggak perlu bingung!"</p>
+        </div>
+      </div>
+      <div class="notice green">
+        <svg><use href="#i-chat"/></svg>
+        <p><strong>Tips:</strong> Tulis pertanyaanmu dengan jelas dan lengkap biar Minjar bisa bantu jawab dengan cepat dan tepat. Contoh: "Kapan jadwal briefing KM 11 untuk wilayah Jakarta?"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-logo"><img src="img/logo-for-dark.png" alt="Kemenkeu Mengajar 11"></div>
+        <p>Kemenkeu Mengajar adalah gerakan kerelawanan pegawai Kementerian Keuangan. Satu hari mengajar, selamanya menginspirasi. November 2026, kami kembali.</p>
+        <div class="socials">
+          <a href="https://instagram.com/kemenkeumengajar" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://x.com/kemenkeuri" target="_blank" rel="noopener" aria-label="X"><svg><use href="#i-x"/></svg></a>
+          <a href="https://tiktok.com/@kemenkeumengajar" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a>
+          <a href="https://youtube.com/@kemenkeumengajar" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Tentang</h4>
+        <ul>
+          <li><a href="#/tentang-kami">Tentang Kami</a></li>
+          <li><a href="#/perjalanan">Perjalanan KM</a></li>
+          <li><a href="#/panduan-umum">Panduan Umum</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>KM 11</h4>
+        <ul>
+          <li><a href="#/panduan-km11">Panduan KM 11</a></li>
+          <li><a href="#/pengumuman">Pengumuman</a></li>
+          <li><a href="#/oprec">Open Recruitment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <ul>
+          <li><a href="#/faq">FAQ</a></li>
+          <li><a href="#/minjar">Tutorial Minjar</a></li>
+          <li><a href="#/lomba">Lomba &amp; Karya</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Kemenkeu Mengajar, Kementerian Keuangan Republik Indonesia</span>
+      <span class="hand">Satu Hari Mengajar, Selamanya Menginspirasi</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pages = document.querySelectorAll('.page');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  var groups = document.querySelectorAll('.nav-links > li');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var burger = document.getElementById('burger');
+
+  var groupMap = {
+    'home':null,
+    'tentang-kami':'tentang','perjalanan':'tentang','panduan-umum':'tentang',
+    'briefing':'kegiatan','hari-mengajar':'kegiatan','refleksi':'kegiatan',
+    'panduan-km11':'km11','pengumuman':'km11','oprec':'km11',
+    'lomba':'lomba','fotografi':'lomba','aftermovie':'lomba',
+    'faq':'bantuan','minjar':'bantuan'
+  };
+
+  function route(){
+    var hash = location.hash.replace(/^#\/?/, '') || 'home';
+    var found = false;
+    pages.forEach(function(p){
+      var on = p.getAttribute('data-page') === hash;
+      p.classList.toggle('active', on);
+      if(on) found = true;
+    });
+    if(!found){
+      pages.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-page')==='home'); });
+      hash = 'home';
+    }
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-route') === hash);
+    });
+    groups.forEach(function(g){
+      var btn = g.querySelector('.dropbtn');
+      if(!btn) return;
+      var grp = btn.getAttribute('data-route-group');
+      var on = groupMap[hash] === grp;
+      btn.style.background = on ? 'var(--yellow-bg)' : '';
+      btn.style.color = on ? 'var(--yellow-d)' : '';
+    });
+    mobileMenu.classList.remove('open');
+    groups.forEach(function(g){ g.classList.remove('open'); });
+    window.scrollTo({top:0, behavior:'instant'});
+  }
+
+  groups.forEach(function(g){
+    var btn = g.querySelector('.dropbtn');
+    if(!btn) return;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var wasOpen = g.classList.contains('open');
+      groups.forEach(function(x){ x.classList.remove('open'); });
+      if(!wasOpen) g.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(){
+    groups.forEach(function(g){ g.classList.remove('open'); });
+  });
+
+  burger.addEventListener('click', function(e){
+    e.stopPropagation();
+    mobileMenu.classList.toggle('open');
+  });
+
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      var target = t.getAttribute('data-tab');
+      tabs.forEach(function(x){ x.classList.toggle('active', x===t); });
+      document.querySelectorAll('.tab-panel').forEach(function(p){
+        p.classList.toggle('active', p.getAttribute('data-panel') === target);
+      });
+    });
+  });
+
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
