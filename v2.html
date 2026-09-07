@@ -65,6 +65,20 @@ header{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:2
 
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
+.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;text-decoration:none;color:var(--ink-soft);padding:.35rem 0;border-radius:14px;font-weight:800;font-size:.62rem;min-width:0;transition:color .15s}
+.bn-item svg{width:23px;height:23px;flex-shrink:0}
+.bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.bn-item.active{color:var(--green)}
+.bn-fab{display:none;align-items:center;justify-content:center;background:var(--green);color:#fff;border-radius:18px;width:54px;height:54px;box-shadow:0 5px 0 var(--green-d),0 8px 18px rgba(0,0,0,.18);text-decoration:none;flex-shrink:0;transition:transform .15s,box-shadow .15s}
+.bn-fab svg{width:25px;height:25px}
+.bn-fab:active{transform:translateY(4px);box-shadow:0 1px 0 var(--green-d)}
+.bn-menu{display:none;align-items:center;gap:.55rem;border:2px solid var(--line);border-radius:999px;padding:.55rem .95rem;background:var(--paper);box-shadow:0 4px 0 var(--line);cursor:pointer;flex-shrink:0;transition:transform .15s,box-shadow .15s}
+.bn-menu .dot{width:8px;height:8px;border-radius:50%}
+.bn-menu .dot:nth-child(1){background:var(--blue)}
+.bn-menu .dot:nth-child(2){background:var(--yellow)}
+.bn-menu .dot:nth-child(3){background:var(--green)}
+.bn-menu:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.floating-header{display:none}
 
 /* ============ PAGES ============ */
 .page{display:none;min-height:100vh}
@@ -260,19 +274,19 @@ footer a:hover{color:var(--yellow)}
 @media(max-width:1020px){
   .nav-links,.nav .cta-btn{display:none}
   .nav .burger{display:none}
-  header{position:static}
+  header{position:fixed;top:0;left:0;right:0;z-index:115;background:transparent;border-bottom:0;pointer-events:none}
+  .floating-header{display:flex;justify-content:center;padding:.6rem 1rem;pointer-events:none}
+  .floating-header .logo{pointer-events:auto}
+  .floating-header img{height:46px;width:auto;filter:drop-shadow(0 3px 8px rgba(60,60,60,.3))}
   .nav{padding:.7rem 1.2rem}
   .logo img{height:38px}
-  .hero{padding:2.5rem 0 3.5rem}
-  .page>.section:first-child{padding-top:3rem}
-  body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px))}
-  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--paper);border-top:2px solid var(--line);align-items:center;justify-content:space-between;padding:.7rem 1.1rem;padding-bottom:calc(.7rem + env(safe-area-inset-bottom,0px));gap:.7rem}
-  .bottom-nav img{height:32px;width:auto}
-  .bottom-nav .bn-burger{display:flex;background:var(--green);border:0;border-radius:14px;width:46px;height:46px;cursor:pointer;box-shadow:0 4px 0 var(--green-d);align-items:center;justify-content:center;flex-shrink:0}
-  .bottom-nav .bn-burger svg{width:22px;height:22px;color:#fff}
-  .bottom-nav .bn-burger:active{transform:translateY(3px);box-shadow:0 1px 0 var(--green-d)}
-  .bottom-nav .bn-cta{padding:.55rem .95rem;font-size:.88rem}
-  .mobile-menu{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:105;max-height:72vh;overflow-y:auto;border-bottom:0;border-top:2px solid var(--line);border-radius:22px 22px 0 0;padding:1.2rem 1.5rem;padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+  .hero{padding:4.5rem 0 3.5rem}
+  .page>.section:first-child{padding-top:5.5rem}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--paper);border-top:2px solid var(--line);align-items:stretch;justify-content:space-around;padding:.4rem .5rem .3rem;padding-bottom:calc(.3rem + env(safe-area-inset-bottom,0px));gap:.25rem}
+  .bn-fab{display:flex;position:fixed;right:1rem;bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:111}
+  .bn-menu{display:flex}
+  .mobile-menu{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:105;max-height:72vh;overflow-y:auto;border-bottom:0;border-top:2px solid var(--line);border-radius:22px 22px 0 0;padding:1.2rem 1.5rem;padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{margin-top:.5rem}
   .grid3,.grid4{grid-template-columns:1fr 1fr}
@@ -311,6 +325,11 @@ footer a:hover{color:var(--yellow)}
 
 <!-- ============ NAV ============ -->
 <header>
+  <div class="floating-header">
+    <a href="#/home" class="logo">
+      <img src="img/logo.png" alt="Kemenkeu Mengajar 11">
+    </a>
+  </div>
   <nav class="nav">
     <a href="#/home" class="logo">
       <img src="img/logo.png" alt="Kemenkeu Mengajar 11">
@@ -380,11 +399,17 @@ footer a:hover{color:var(--yellow)}
 </header>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
-<div class="bottom-nav">
-  <a href="#/home" class="logo"><img src="img/logo.png" alt="Kemenkeu Mengajar 11"></a>
-  <a href="#/oprec" class="cta-btn bn-cta">Daftar KM 11</a>
-  <button class="bn-burger" id="bnBurger" aria-label="Menu"><svg><use href="#i-menu"/></svg></button>
-</div>
+<nav class="bottom-nav" aria-label="Navigasi utama">
+  <a href="#/home" class="bn-item" data-route="home"><svg><use href="#i-book"/></svg><span>Home</span></a>
+  <a href="#/pengumuman" class="bn-item" data-route="pengumuman"><svg><use href="#i-megaphone"/></svg><span>Pengumuman</span></a>
+  <a href="#/hari-mengajar" class="bn-item" data-route="hari-mengajar"><svg><use href="#i-pencil"/></svg><span>Mengajar</span></a>
+  <a href="#/oprec" class="bn-item" data-route="oprec"><svg><use href="#i-users"/></svg><span>Oprec</span></a>
+  <a href="#/faq" class="bn-item" data-route="faq"><svg><use href="#i-chat"/></svg><span>FAQ</span></a>
+</nav>
+<a href="#/oprec" class="bn-fab" aria-label="Daftar KM 11"><svg><use href="#i-pencil"/></svg></a>
+<button class="bn-menu" id="bnMenu" aria-label="Menu lengkap" style="position:fixed;left:1rem;bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:111">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</button>
 
 <!-- ============ HOME ============ -->
 <section class="page" data-page="home">
@@ -1141,7 +1166,8 @@ footer a:hover{color:var(--yellow)}
   var navLinks = document.querySelectorAll('.nav-links a');
   var groups = document.querySelectorAll('.nav-links > li');
   var mobileMenu = document.getElementById('mobileMenu');
-  var burger = document.getElementById('bnBurger');
+  var bnMenu = document.getElementById('bnMenu');
+  var bnItems = document.querySelectorAll('.bn-item');
 
   var groupMap = {
     'home':null,
@@ -1165,6 +1191,9 @@ footer a:hover{color:var(--yellow)}
       hash = 'home';
     }
     navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-route') === hash);
+    });
+    bnItems.forEach(function(a){
       a.classList.toggle('active', a.getAttribute('data-route') === hash);
     });
     groups.forEach(function(g){
@@ -1194,9 +1223,19 @@ footer a:hover{color:var(--yellow)}
     groups.forEach(function(g){ g.classList.remove('open'); });
   });
 
-  burger.addEventListener('click', function(e){
+  bnMenu.addEventListener('click', function(e){
     e.stopPropagation();
     mobileMenu.classList.toggle('open');
+  });
+
+  // mobile bottom nav: tap active tab again = scroll to top
+  bnItems.forEach(function(a){
+    a.addEventListener('click', function(e){
+      if(a.classList.contains('active')){
+        e.preventDefault();
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+    });
   });
 
   var tabs = document.querySelectorAll('.tab');

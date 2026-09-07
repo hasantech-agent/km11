@@ -75,6 +75,20 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 
 /* ============ MOBILE BOTTOM NAV ============ */
 .bottom-nav{display:none}
+.bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;color:var(--black);padding:.35rem 0;border-radius:12px;font-weight:700;font-size:.62rem;min-width:0}
+.bn-item svg{width:23px;height:23px;flex-shrink:0}
+.bn-item span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;letter-spacing:.01em}
+.bn-item.active{color:var(--purple)}
+.bn-fab{display:none;align-items:center;justify-content:center;background:var(--g-green);color:var(--black);border:3px solid var(--black);border-radius:16px;width:52px;height:52px;box-shadow:4px 4px 0 var(--black);text-decoration:none;font-family:var(--font-display);font-weight:800;font-size:1.5rem;flex-shrink:0;transition:transform .15s,box-shadow .15s}
+.bn-fab svg{width:24px;height:24px}
+.bn-fab:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black)}
+.bn-menu{display:none;align-items:center;gap:.6rem;border:3px solid var(--black);border-radius:16px;padding:.35rem 1rem;background:var(--white);box-shadow:4px 4px 0 var(--black);cursor:pointer;flex-shrink:0}
+.bn-menu .dot{width:9px;height:9px;border-radius:50%;border:2px solid var(--black)}
+.bn-menu .dot:nth-child(1){background:var(--b-red)}
+.bn-menu .dot:nth-child(2){background:var(--b-yellow)}
+.bn-menu .dot:nth-child(3){background:var(--teal)}
+.bn-menu:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black)}
+.floating-header{display:none}
 
 /* ============ PAGES / SPA ============ */
 .page{display:none;min-height:100vh}
@@ -235,19 +249,19 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 @media(max-width:1020px){
   .nav-links,.nav .cta-btn{display:none}
   .nav .burger{display:none}
-  header{position:static;border-bottom:3px solid var(--black)}
+  header{position:fixed;top:0;width:100%;z-index:115;background:transparent;border-bottom:0;pointer-events:none}
+  .floating-header{display:flex;justify-content:center;padding:.6rem 1rem;pointer-events:none}
+  .floating-header .logo{pointer-events:auto}
+  .floating-header img{height:46px;width:auto;filter:drop-shadow(2px 3px 0 rgba(35,31,32,.35))}
   .nav{padding:.7rem 1.2rem}
   .logo img{height:38px}
-  .hero{padding:3rem 0 0}
-  .page>.section:first-child{padding-top:3.5rem}
-  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
-  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--white);border-top:4px solid var(--black);align-items:center;justify-content:space-between;padding:.7rem 1.1rem;padding-bottom:calc(.7rem + env(safe-area-inset-bottom,0px));gap:.7rem}
-  .bottom-nav img{height:32px;width:auto}
-  .bottom-nav .bn-burger{display:flex;background:var(--b-yellow);border:3px solid var(--black);border-radius:10px;width:46px;height:46px;cursor:pointer;box-shadow:3px 3px 0 var(--black);align-items:center;justify-content:center;flex-shrink:0}
-  .bottom-nav .bn-burger svg{width:22px;height:22px}
-  .bottom-nav .bn-burger:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--black)}
-  .bottom-nav .bn-cta{padding:.55rem .95rem;font-size:.88rem}
-  .mobile-menu{inset:auto 0 0 0;max-height:72vh;border-top:4px solid var(--black);border-radius:20px 20px 0 0;padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .hero{padding:5.5rem 0 0}
+  .page>.section:first-child{padding-top:6rem}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:110;background:var(--white);border-top:4px solid var(--black);align-items:stretch;justify-content:space-around;padding:.4rem .5rem .3rem;padding-bottom:calc(.3rem + env(safe-area-inset-bottom,0px));gap:.25rem}
+  .bn-fab{display:flex;position:fixed;right:1rem;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:111}
+  .bn-menu{display:flex}
+  .mobile-menu{inset:auto 0 0 0;max-height:72vh;border-top:4px solid var(--black);border-radius:20px 20px 0 0;padding-bottom:calc(150px + env(safe-area-inset-bottom,0px))}
   .hero-grid{grid-template-columns:1fr}
   .hero-art{min-height:420px;margin-top:1rem;position:relative}
   .hero-note{position:relative;top:auto;right:auto;display:block;margin-bottom:1.5rem;font-size:1.3rem}
@@ -289,6 +303,11 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 
 <!-- ===== HEADER ===== -->
 <header>
+  <div class="floating-header">
+    <a href="#/home" class="logo">
+      <img src="img/logo.png" alt="Kemenkeu Mengajar 11">
+    </a>
+  </div>
   <nav class="nav">
     <a href="#/home" class="logo">
       <img src="img/logo.png" alt="Kemenkeu Mengajar 11">
@@ -341,11 +360,17 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
 </header>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
-<div class="bottom-nav">
-  <a href="#/home" class="logo"><img src="img/logo.png" alt="Kemenkeu Mengajar 11"></a>
-  <a href="#/oprec" class="cta-btn bn-cta">Daftar KM 11</a>
-  <button class="bn-burger" id="bnBurger" aria-label="Menu"><svg><use href="#i-menu"/></svg></button>
-</div>
+<nav class="bottom-nav" aria-label="Navigasi utama">
+  <a href="#/home" class="bn-item" data-route="home"><svg><use href="#i-book"/></svg><span>Home</span></a>
+  <a href="#/pengumuman" class="bn-item" data-route="pengumuman"><svg><use href="#i-megaphone"/></svg><span>Pengumuman</span></a>
+  <a href="#/hari-mengajar" class="bn-item" data-route="hari-mengajar"><svg><use href="#i-pencil"/></svg><span>Mengajar</span></a>
+  <a href="#/oprec" class="bn-item" data-route="oprec"><svg><use href="#i-users"/></svg><span>Oprec</span></a>
+  <a href="#/faq" class="bn-item" data-route="faq"><svg><use href="#i-help"/></svg><span>FAQ</span></a>
+</nav>
+<a href="#/oprec" class="bn-fab" aria-label="Daftar KM 11"><svg><use href="#i-pencil"/></svg></a>
+<button class="bn-menu" id="bnMenu" aria-label="Menu lengkap" style="position:fixed;left:1rem;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:111">
+  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</button>
 
 <!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu">
@@ -1175,7 +1200,7 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   var navLinks = document.querySelectorAll('.nav-links a');
   var groups = document.querySelectorAll('.nav-links > li');
   var mobileMenu = document.getElementById('mobileMenu');
-  var burger = document.getElementById('bnBurger');
+  var bnItems = document.querySelectorAll('.bn-item');
 
   var groupMap = {
     'home':null,
@@ -1199,6 +1224,9 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
       hash = 'home';
     }
     navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('data-route') === hash);
+    });
+    bnItems.forEach(function(a){
       a.classList.toggle('active', a.getAttribute('data-route') === hash);
     });
     groups.forEach(function(g){
@@ -1230,10 +1258,20 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
     groups.forEach(function(g){ g.classList.remove('open'); });
   });
 
-  // mobile burger
-  burger.addEventListener('click', function(e){
+  var bnMenu = document.getElementById('bnMenu');
+  bnMenu.addEventListener('click', function(e){
     e.stopPropagation();
     mobileMenu.classList.toggle('open');
+  });
+
+  // mobile bottom nav: tap active tab again = scroll to top
+  bnItems.forEach(function(a){
+    a.addEventListener('click', function(e){
+      if(a.classList.contains('active')){
+        e.preventDefault();
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+    });
   });
 
   // tabs (oprec)
