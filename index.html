@@ -75,6 +75,7 @@ header{position:fixed;top:0;width:100%;z-index:100;background:var(--white);borde
 .bn-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;text-decoration:none;color:var(--black);padding:.35rem 0;border-radius:12px;font-weight:700;font-size:.72rem;min-width:0}
 button.bn-item{background:none;border:0;font-family:inherit;cursor:pointer}
 .daftar-fab{display:none}
+.daftar-fab.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .daftar-fab svg{width:18px;height:18px;max-width:18px;max-height:18px}
 .bn-item svg{width:23px;height:23px;flex-shrink:0}
 .bn-item span{white-space:nowrap;overflow:visible;text-overflow:clip;max-width:none;letter-spacing:.01em}
@@ -249,7 +250,7 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   .nav{display:none}
   .bn-wrap{display:block;padding:0 .75rem}
   .bottom-nav{display:flex;width:100%;background:var(--white);border:3px solid var(--black);border-radius:999px;box-shadow:4px 4px 0 var(--black);align-items:center;padding:.4rem .5rem;gap:.3rem}
-  .daftar-fab{display:inline-flex;align-items:center;gap:.35rem;position:fixed;right:1rem;bottom:calc(108px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border:3px solid var(--black);border-radius:999px;padding:.5rem .8rem;text-decoration:none;font-weight:800;font-size:.75rem;box-shadow:3px 3px 0 var(--black);white-space:nowrap}
+  .daftar-fab{display:inline-flex;align-items:center;gap:.35rem;position:fixed;right:1rem;bottom:calc(97px + env(safe-area-inset-bottom,0px));z-index:112;background:var(--g-green);color:var(--black);border:3px solid var(--black);border-radius:999px;padding:.5rem .8rem;text-decoration:none;font-weight:800;font-size:.75rem;box-shadow:3px 3px 0 var(--black);white-space:nowrap}
   .logo img{height:38px}
   .hero{padding:5.5rem 0 0}
   .page>.section:first-child{padding-top:6rem}
@@ -1217,6 +1218,8 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
   function closeSheet(){
     openSheetKey = null;
     mobileMenu.classList.remove('open');
+    var fab = document.querySelector('.daftar-fab');
+    if(fab) fab.classList.remove('hidden');
   }
 
   function openSheet(key){
@@ -1229,6 +1232,8 @@ footer{background:var(--black);color:var(--white);border-top:5px solid var(--bla
     html += '</div>';
     mobileMenu.innerHTML = html;
     mobileMenu.classList.add('open');
+    var fab = document.querySelector('.daftar-fab');
+    if(fab) fab.classList.add('hidden');
     openSheetKey = key;
   }
 
